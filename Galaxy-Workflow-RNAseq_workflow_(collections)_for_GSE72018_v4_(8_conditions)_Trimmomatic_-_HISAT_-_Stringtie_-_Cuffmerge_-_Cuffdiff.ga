@@ -1,0 +1,2687 @@
+{
+    "a_galaxy_workflow": "true", 
+    "annotation": "", 
+    "format-version": "0.1", 
+    "name": "RNAseq workflow (collections) for GSE72018 v4 (8 conditions) Trimmomatic - HISAT - Stringtie - Cuffmerge - Cuffdiff", 
+    "steps": {
+        "0": {
+            "annotation": "", 
+            "content_id": null, 
+            "id": 0, 
+            "input_connections": {}, 
+            "inputs": [
+                {
+                    "description": "", 
+                    "name": "proB"
+                }
+            ], 
+            "label": null, 
+            "name": "Input dataset collection", 
+            "outputs": [], 
+            "position": {
+                "left": 279.953125, 
+                "top": 795.40625
+            }, 
+            "tool_errors": null, 
+            "tool_id": null, 
+            "tool_state": "{\"collection_type\": \"list:paired\", \"name\": \"proB\"}", 
+            "tool_version": null, 
+            "type": "data_collection_input", 
+            "uuid": "cd08280c-b3d2-4e68-b1a6-e121bd88976f", 
+            "workflow_outputs": []
+        }, 
+        "1": {
+            "annotation": "", 
+            "content_id": null, 
+            "id": 1, 
+            "input_connections": {}, 
+            "inputs": [
+                {
+                    "description": "", 
+                    "name": "preB"
+                }
+            ], 
+            "label": null, 
+            "name": "Input dataset collection", 
+            "outputs": [], 
+            "position": {
+                "left": 279.953125, 
+                "top": 880.40625
+            }, 
+            "tool_errors": null, 
+            "tool_id": null, 
+            "tool_state": "{\"collection_type\": \"list:paired\", \"name\": \"preB\"}", 
+            "tool_version": null, 
+            "type": "data_collection_input", 
+            "uuid": "96f2caf1-8e22-46a1-99da-ec0089f4bec3", 
+            "workflow_outputs": []
+        }, 
+        "2": {
+            "annotation": "", 
+            "content_id": null, 
+            "id": 2, 
+            "input_connections": {}, 
+            "inputs": [
+                {
+                    "description": "", 
+                    "name": "Immature"
+                }
+            ], 
+            "label": null, 
+            "name": "Input dataset collection", 
+            "outputs": [], 
+            "position": {
+                "left": 279.953125, 
+                "top": 965.390625
+            }, 
+            "tool_errors": null, 
+            "tool_id": null, 
+            "tool_state": "{\"collection_type\": \"list:paired\", \"name\": \"Immature\"}", 
+            "tool_version": null, 
+            "type": "data_collection_input", 
+            "uuid": "51634da8-17cd-4e46-bbe5-6e884525fe29", 
+            "workflow_outputs": []
+        }, 
+        "3": {
+            "annotation": "", 
+            "content_id": null, 
+            "id": 3, 
+            "input_connections": {}, 
+            "inputs": [
+                {
+                    "description": "", 
+                    "name": "Mature"
+                }
+            ], 
+            "label": null, 
+            "name": "Input dataset collection", 
+            "outputs": [], 
+            "position": {
+                "left": 279.953125, 
+                "top": 1050.390625
+            }, 
+            "tool_errors": null, 
+            "tool_id": null, 
+            "tool_state": "{\"collection_type\": \"list:paired\", \"name\": \"Mature\"}", 
+            "tool_version": null, 
+            "type": "data_collection_input", 
+            "uuid": "8ccdb097-379c-4efb-8d1c-c8e87c6da586", 
+            "workflow_outputs": []
+        }, 
+        "4": {
+            "annotation": "", 
+            "content_id": null, 
+            "id": 4, 
+            "input_connections": {}, 
+            "inputs": [
+                {
+                    "description": "", 
+                    "name": "Follicular"
+                }
+            ], 
+            "label": null, 
+            "name": "Input dataset collection", 
+            "outputs": [], 
+            "position": {
+                "left": 279.953125, 
+                "top": 1135.390625
+            }, 
+            "tool_errors": null, 
+            "tool_id": null, 
+            "tool_state": "{\"collection_type\": \"list:paired\", \"name\": \"Follicular\"}", 
+            "tool_version": null, 
+            "type": "data_collection_input", 
+            "uuid": "49f86cb7-bc50-485e-a9bd-f18d50ecde35", 
+            "workflow_outputs": []
+        }, 
+        "5": {
+            "annotation": "", 
+            "content_id": null, 
+            "id": 5, 
+            "input_connections": {}, 
+            "inputs": [
+                {
+                    "description": "", 
+                    "name": "Marginal"
+                }
+            ], 
+            "label": null, 
+            "name": "Input dataset collection", 
+            "outputs": [], 
+            "position": {
+                "left": 279.953125, 
+                "top": 1220.40625
+            }, 
+            "tool_errors": null, 
+            "tool_id": null, 
+            "tool_state": "{\"collection_type\": \"list:paired\", \"name\": \"Marginal\"}", 
+            "tool_version": null, 
+            "type": "data_collection_input", 
+            "uuid": "bc06b54f-8c99-458d-a0bd-bb6c8b0c2775", 
+            "workflow_outputs": []
+        }, 
+        "6": {
+            "annotation": "", 
+            "content_id": null, 
+            "id": 6, 
+            "input_connections": {}, 
+            "inputs": [
+                {
+                    "description": "", 
+                    "name": "Germinal"
+                }
+            ], 
+            "label": null, 
+            "name": "Input dataset collection", 
+            "outputs": [], 
+            "position": {
+                "left": 226.9375, 
+                "top": 1402.40625
+            }, 
+            "tool_errors": null, 
+            "tool_id": null, 
+            "tool_state": "{\"collection_type\": \"list:paired\", \"name\": \"Germinal\"}", 
+            "tool_version": null, 
+            "type": "data_collection_input", 
+            "uuid": "bca5b3b4-602c-47ae-a999-238ead2f094b", 
+            "workflow_outputs": []
+        }, 
+        "7": {
+            "annotation": "", 
+            "content_id": null, 
+            "id": 7, 
+            "input_connections": {}, 
+            "inputs": [
+                {
+                    "description": "", 
+                    "name": "B1a"
+                }
+            ], 
+            "label": null, 
+            "name": "Input dataset collection", 
+            "outputs": [], 
+            "position": {
+                "left": 223, 
+                "top": 1595.40625
+            }, 
+            "tool_errors": null, 
+            "tool_id": null, 
+            "tool_state": "{\"collection_type\": \"list:paired\", \"name\": \"B1a\"}", 
+            "tool_version": null, 
+            "type": "data_collection_input", 
+            "uuid": "cb72b220-598d-44fc-87f8-59ae8455fd7b", 
+            "workflow_outputs": []
+        }, 
+        "8": {
+            "annotation": "", 
+            "content_id": null, 
+            "id": 8, 
+            "input_connections": {}, 
+            "inputs": [
+                {
+                    "description": "", 
+                    "name": "Reference for Cuffmerge"
+                }
+            ], 
+            "label": null, 
+            "name": "Input dataset", 
+            "outputs": [], 
+            "position": {
+                "left": 1755.6875, 
+                "top": 3164.875
+            }, 
+            "tool_errors": null, 
+            "tool_id": null, 
+            "tool_state": "{\"name\": \"Reference for Cuffmerge\"}", 
+            "tool_version": null, 
+            "type": "data_input", 
+            "uuid": "0ea1a35f-0ee7-422d-a5d3-89ac53a844a2", 
+            "workflow_outputs": []
+        }, 
+        "9": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/pjbriggs/trimmomatic/trimmomatic/0.32.3", 
+            "id": 9, 
+            "input_connections": {
+                "paired_end|fastq_in": {
+                    "id": 0, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool Trimmomatic", 
+                    "name": "paired_end"
+                }
+            ], 
+            "label": null, 
+            "name": "Trimmomatic", 
+            "outputs": [
+                {
+                    "name": "fastq_out_paired", 
+                    "type": "input"
+                }, 
+                {
+                    "name": "fastq_out_unpaired", 
+                    "type": "input"
+                }, 
+                {
+                    "name": "fastq_out_r1_paired", 
+                    "type": "fastqsanger"
+                }, 
+                {
+                    "name": "fastq_out_r2_paired", 
+                    "type": "fastqsanger"
+                }, 
+                {
+                    "name": "fastq_out_r1_unpaired", 
+                    "type": "fastqsanger"
+                }, 
+                {
+                    "name": "fastq_out_r2_unpaired", 
+                    "type": "fastqsanger"
+                }, 
+                {
+                    "name": "fastq_out", 
+                    "type": "fastqsanger"
+                }
+            ], 
+            "position": {
+                "left": 547.0625, 
+                "top": 199.96875
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/pjbriggs/trimmomatic/trimmomatic/0.32.3", 
+            "tool_shed_repository": {
+                "changeset_revision": "f8a9a5eaca8a", 
+                "name": "trimmomatic", 
+                "owner": "pjbriggs", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"operations\": \"[{\\\"__index__\\\": 0, \\\"operation\\\": {\\\"window_size\\\": \\\"4\\\", \\\"name\\\": \\\"SLIDINGWINDOW\\\", \\\"__current_case__\\\": 0, \\\"required_quality\\\": \\\"20\\\"}}]\", \"__page__\": 0, \"__rerun_remap_job_id__\": null, \"paired_end\": \"{\\\"fastq_in\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}, \\\"is_paired_end\\\": \\\"false\\\", \\\"__current_case__\\\": 0}\", \"illuminaclip\": \"{\\\"do_illuminaclip\\\": \\\"false\\\", \\\"__current_case__\\\": 1}\"}", 
+            "tool_version": "0.32.3", 
+            "type": "tool", 
+            "uuid": "071fd6af-663c-4165-805f-f914d1834595", 
+            "workflow_outputs": []
+        }, 
+        "10": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/pjbriggs/trimmomatic/trimmomatic/0.32.3", 
+            "id": 10, 
+            "input_connections": {
+                "paired_end|fastq_in": {
+                    "id": 1, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool Trimmomatic", 
+                    "name": "paired_end"
+                }
+            ], 
+            "label": null, 
+            "name": "Trimmomatic", 
+            "outputs": [
+                {
+                    "name": "fastq_out_paired", 
+                    "type": "input"
+                }, 
+                {
+                    "name": "fastq_out_unpaired", 
+                    "type": "input"
+                }, 
+                {
+                    "name": "fastq_out_r1_paired", 
+                    "type": "fastqsanger"
+                }, 
+                {
+                    "name": "fastq_out_r2_paired", 
+                    "type": "fastqsanger"
+                }, 
+                {
+                    "name": "fastq_out_r1_unpaired", 
+                    "type": "fastqsanger"
+                }, 
+                {
+                    "name": "fastq_out_r2_unpaired", 
+                    "type": "fastqsanger"
+                }, 
+                {
+                    "name": "fastq_out", 
+                    "type": "fastqsanger"
+                }
+            ], 
+            "position": {
+                "left": 544.125, 
+                "top": 450.015625
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/pjbriggs/trimmomatic/trimmomatic/0.32.3", 
+            "tool_shed_repository": {
+                "changeset_revision": "f8a9a5eaca8a", 
+                "name": "trimmomatic", 
+                "owner": "pjbriggs", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"operations\": \"[{\\\"__index__\\\": 0, \\\"operation\\\": {\\\"window_size\\\": \\\"4\\\", \\\"name\\\": \\\"SLIDINGWINDOW\\\", \\\"__current_case__\\\": 0, \\\"required_quality\\\": \\\"20\\\"}}]\", \"__page__\": 0, \"__rerun_remap_job_id__\": null, \"paired_end\": \"{\\\"fastq_in\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}, \\\"is_paired_end\\\": \\\"false\\\", \\\"__current_case__\\\": 0}\", \"illuminaclip\": \"{\\\"do_illuminaclip\\\": \\\"false\\\", \\\"__current_case__\\\": 1}\"}", 
+            "tool_version": "0.32.3", 
+            "type": "tool", 
+            "uuid": "a36ddf62-503d-47a5-af61-fc60c5560d23", 
+            "workflow_outputs": []
+        }, 
+        "11": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/pjbriggs/trimmomatic/trimmomatic/0.32.3", 
+            "id": 11, 
+            "input_connections": {
+                "paired_end|fastq_in": {
+                    "id": 2, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool Trimmomatic", 
+                    "name": "paired_end"
+                }
+            ], 
+            "label": null, 
+            "name": "Trimmomatic", 
+            "outputs": [
+                {
+                    "name": "fastq_out_paired", 
+                    "type": "input"
+                }, 
+                {
+                    "name": "fastq_out_unpaired", 
+                    "type": "input"
+                }, 
+                {
+                    "name": "fastq_out_r1_paired", 
+                    "type": "fastqsanger"
+                }, 
+                {
+                    "name": "fastq_out_r2_paired", 
+                    "type": "fastqsanger"
+                }, 
+                {
+                    "name": "fastq_out_r1_unpaired", 
+                    "type": "fastqsanger"
+                }, 
+                {
+                    "name": "fastq_out_r2_unpaired", 
+                    "type": "fastqsanger"
+                }, 
+                {
+                    "name": "fastq_out", 
+                    "type": "fastqsanger"
+                }
+            ], 
+            "position": {
+                "left": 545.09375, 
+                "top": 737
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/pjbriggs/trimmomatic/trimmomatic/0.32.3", 
+            "tool_shed_repository": {
+                "changeset_revision": "f8a9a5eaca8a", 
+                "name": "trimmomatic", 
+                "owner": "pjbriggs", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"operations\": \"[{\\\"__index__\\\": 0, \\\"operation\\\": {\\\"window_size\\\": \\\"4\\\", \\\"name\\\": \\\"SLIDINGWINDOW\\\", \\\"__current_case__\\\": 0, \\\"required_quality\\\": \\\"20\\\"}}]\", \"__page__\": 0, \"__rerun_remap_job_id__\": null, \"paired_end\": \"{\\\"fastq_in\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}, \\\"is_paired_end\\\": \\\"false\\\", \\\"__current_case__\\\": 0}\", \"illuminaclip\": \"{\\\"do_illuminaclip\\\": \\\"false\\\", \\\"__current_case__\\\": 1}\"}", 
+            "tool_version": "0.32.3", 
+            "type": "tool", 
+            "uuid": "b041e541-64be-448c-af5a-8250b7800732", 
+            "workflow_outputs": []
+        }, 
+        "12": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/pjbriggs/trimmomatic/trimmomatic/0.32.3", 
+            "id": 12, 
+            "input_connections": {
+                "paired_end|fastq_in": {
+                    "id": 3, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool Trimmomatic", 
+                    "name": "paired_end"
+                }
+            ], 
+            "label": null, 
+            "name": "Trimmomatic", 
+            "outputs": [
+                {
+                    "name": "fastq_out_paired", 
+                    "type": "input"
+                }, 
+                {
+                    "name": "fastq_out_unpaired", 
+                    "type": "input"
+                }, 
+                {
+                    "name": "fastq_out_r1_paired", 
+                    "type": "fastqsanger"
+                }, 
+                {
+                    "name": "fastq_out_r2_paired", 
+                    "type": "fastqsanger"
+                }, 
+                {
+                    "name": "fastq_out_r1_unpaired", 
+                    "type": "fastqsanger"
+                }, 
+                {
+                    "name": "fastq_out_r2_unpaired", 
+                    "type": "fastqsanger"
+                }, 
+                {
+                    "name": "fastq_out", 
+                    "type": "fastqsanger"
+                }
+            ], 
+            "position": {
+                "left": 543.09375, 
+                "top": 985
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/pjbriggs/trimmomatic/trimmomatic/0.32.3", 
+            "tool_shed_repository": {
+                "changeset_revision": "f8a9a5eaca8a", 
+                "name": "trimmomatic", 
+                "owner": "pjbriggs", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"operations\": \"[{\\\"__index__\\\": 0, \\\"operation\\\": {\\\"window_size\\\": \\\"4\\\", \\\"name\\\": \\\"SLIDINGWINDOW\\\", \\\"__current_case__\\\": 0, \\\"required_quality\\\": \\\"20\\\"}}]\", \"__page__\": 0, \"__rerun_remap_job_id__\": null, \"paired_end\": \"{\\\"fastq_in\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}, \\\"is_paired_end\\\": \\\"false\\\", \\\"__current_case__\\\": 0}\", \"illuminaclip\": \"{\\\"do_illuminaclip\\\": \\\"false\\\", \\\"__current_case__\\\": 1}\"}", 
+            "tool_version": "0.32.3", 
+            "type": "tool", 
+            "uuid": "6b9db04a-25f5-4913-811a-ded8a51f501d", 
+            "workflow_outputs": []
+        }, 
+        "13": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/pjbriggs/trimmomatic/trimmomatic/0.32.3", 
+            "id": 13, 
+            "input_connections": {
+                "paired_end|fastq_in": {
+                    "id": 4, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool Trimmomatic", 
+                    "name": "paired_end"
+                }
+            ], 
+            "label": null, 
+            "name": "Trimmomatic", 
+            "outputs": [
+                {
+                    "name": "fastq_out_paired", 
+                    "type": "input"
+                }, 
+                {
+                    "name": "fastq_out_unpaired", 
+                    "type": "input"
+                }, 
+                {
+                    "name": "fastq_out_r1_paired", 
+                    "type": "fastqsanger"
+                }, 
+                {
+                    "name": "fastq_out_r2_paired", 
+                    "type": "fastqsanger"
+                }, 
+                {
+                    "name": "fastq_out_r1_unpaired", 
+                    "type": "fastqsanger"
+                }, 
+                {
+                    "name": "fastq_out_r2_unpaired", 
+                    "type": "fastqsanger"
+                }, 
+                {
+                    "name": "fastq_out", 
+                    "type": "fastqsanger"
+                }
+            ], 
+            "position": {
+                "left": 540.078125, 
+                "top": 1224.015625
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/pjbriggs/trimmomatic/trimmomatic/0.32.3", 
+            "tool_shed_repository": {
+                "changeset_revision": "f8a9a5eaca8a", 
+                "name": "trimmomatic", 
+                "owner": "pjbriggs", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"operations\": \"[{\\\"__index__\\\": 0, \\\"operation\\\": {\\\"window_size\\\": \\\"4\\\", \\\"name\\\": \\\"SLIDINGWINDOW\\\", \\\"__current_case__\\\": 0, \\\"required_quality\\\": \\\"20\\\"}}]\", \"__page__\": 0, \"__rerun_remap_job_id__\": null, \"paired_end\": \"{\\\"fastq_in\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}, \\\"is_paired_end\\\": \\\"false\\\", \\\"__current_case__\\\": 0}\", \"illuminaclip\": \"{\\\"do_illuminaclip\\\": \\\"false\\\", \\\"__current_case__\\\": 1}\"}", 
+            "tool_version": "0.32.3", 
+            "type": "tool", 
+            "uuid": "37407888-c515-4f12-84f8-96e2c9926cbb", 
+            "workflow_outputs": []
+        }, 
+        "14": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/pjbriggs/trimmomatic/trimmomatic/0.32.3", 
+            "id": 14, 
+            "input_connections": {
+                "paired_end|fastq_in": {
+                    "id": 5, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool Trimmomatic", 
+                    "name": "paired_end"
+                }
+            ], 
+            "label": null, 
+            "name": "Trimmomatic", 
+            "outputs": [
+                {
+                    "name": "fastq_out_paired", 
+                    "type": "input"
+                }, 
+                {
+                    "name": "fastq_out_unpaired", 
+                    "type": "input"
+                }, 
+                {
+                    "name": "fastq_out_r1_paired", 
+                    "type": "fastqsanger"
+                }, 
+                {
+                    "name": "fastq_out_r2_paired", 
+                    "type": "fastqsanger"
+                }, 
+                {
+                    "name": "fastq_out_r1_unpaired", 
+                    "type": "fastqsanger"
+                }, 
+                {
+                    "name": "fastq_out_r2_unpaired", 
+                    "type": "fastqsanger"
+                }, 
+                {
+                    "name": "fastq_out", 
+                    "type": "fastqsanger"
+                }
+            ], 
+            "position": {
+                "left": 511.09375, 
+                "top": 1535.03125
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/pjbriggs/trimmomatic/trimmomatic/0.32.3", 
+            "tool_shed_repository": {
+                "changeset_revision": "f8a9a5eaca8a", 
+                "name": "trimmomatic", 
+                "owner": "pjbriggs", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"operations\": \"[{\\\"__index__\\\": 0, \\\"operation\\\": {\\\"window_size\\\": \\\"4\\\", \\\"name\\\": \\\"SLIDINGWINDOW\\\", \\\"__current_case__\\\": 0, \\\"required_quality\\\": \\\"20\\\"}}]\", \"__page__\": 0, \"__rerun_remap_job_id__\": null, \"paired_end\": \"{\\\"fastq_in\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}, \\\"is_paired_end\\\": \\\"false\\\", \\\"__current_case__\\\": 0}\", \"illuminaclip\": \"{\\\"do_illuminaclip\\\": \\\"false\\\", \\\"__current_case__\\\": 1}\"}", 
+            "tool_version": "0.32.3", 
+            "type": "tool", 
+            "uuid": "17557521-6a02-4a78-80f0-ae0376cd9423", 
+            "workflow_outputs": []
+        }, 
+        "15": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/pjbriggs/trimmomatic/trimmomatic/0.32.3", 
+            "id": 15, 
+            "input_connections": {
+                "paired_end|fastq_in": {
+                    "id": 6, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool Trimmomatic", 
+                    "name": "paired_end"
+                }
+            ], 
+            "label": null, 
+            "name": "Trimmomatic", 
+            "outputs": [
+                {
+                    "name": "fastq_out_paired", 
+                    "type": "input"
+                }, 
+                {
+                    "name": "fastq_out_unpaired", 
+                    "type": "input"
+                }, 
+                {
+                    "name": "fastq_out_r1_paired", 
+                    "type": "fastqsanger"
+                }, 
+                {
+                    "name": "fastq_out_r2_paired", 
+                    "type": "fastqsanger"
+                }, 
+                {
+                    "name": "fastq_out_r1_unpaired", 
+                    "type": "fastqsanger"
+                }, 
+                {
+                    "name": "fastq_out_r2_unpaired", 
+                    "type": "fastqsanger"
+                }, 
+                {
+                    "name": "fastq_out", 
+                    "type": "fastqsanger"
+                }
+            ], 
+            "position": {
+                "left": 489.109375, 
+                "top": 1867.046875
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/pjbriggs/trimmomatic/trimmomatic/0.32.3", 
+            "tool_shed_repository": {
+                "changeset_revision": "f8a9a5eaca8a", 
+                "name": "trimmomatic", 
+                "owner": "pjbriggs", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"operations\": \"[{\\\"__index__\\\": 0, \\\"operation\\\": {\\\"window_size\\\": \\\"4\\\", \\\"name\\\": \\\"SLIDINGWINDOW\\\", \\\"__current_case__\\\": 0, \\\"required_quality\\\": \\\"20\\\"}}]\", \"__page__\": 0, \"__rerun_remap_job_id__\": null, \"paired_end\": \"{\\\"fastq_in\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}, \\\"is_paired_end\\\": \\\"false\\\", \\\"__current_case__\\\": 0}\", \"illuminaclip\": \"{\\\"do_illuminaclip\\\": \\\"false\\\", \\\"__current_case__\\\": 1}\"}", 
+            "tool_version": "0.32.3", 
+            "type": "tool", 
+            "uuid": "33a4e1ea-945d-4c0e-a02e-d118a401d8fa", 
+            "workflow_outputs": []
+        }, 
+        "16": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/pjbriggs/trimmomatic/trimmomatic/0.32.3", 
+            "id": 16, 
+            "input_connections": {
+                "paired_end|fastq_in": {
+                    "id": 7, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool Trimmomatic", 
+                    "name": "paired_end"
+                }
+            ], 
+            "label": null, 
+            "name": "Trimmomatic", 
+            "outputs": [
+                {
+                    "name": "fastq_out_paired", 
+                    "type": "input"
+                }, 
+                {
+                    "name": "fastq_out_unpaired", 
+                    "type": "input"
+                }, 
+                {
+                    "name": "fastq_out_r1_paired", 
+                    "type": "fastqsanger"
+                }, 
+                {
+                    "name": "fastq_out_r2_paired", 
+                    "type": "fastqsanger"
+                }, 
+                {
+                    "name": "fastq_out_r1_unpaired", 
+                    "type": "fastqsanger"
+                }, 
+                {
+                    "name": "fastq_out_r2_unpaired", 
+                    "type": "fastqsanger"
+                }, 
+                {
+                    "name": "fastq_out", 
+                    "type": "fastqsanger"
+                }
+            ], 
+            "position": {
+                "left": 467.09375, 
+                "top": 2178.03125
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/pjbriggs/trimmomatic/trimmomatic/0.32.3", 
+            "tool_shed_repository": {
+                "changeset_revision": "f8a9a5eaca8a", 
+                "name": "trimmomatic", 
+                "owner": "pjbriggs", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"operations\": \"[{\\\"__index__\\\": 0, \\\"operation\\\": {\\\"window_size\\\": \\\"4\\\", \\\"name\\\": \\\"SLIDINGWINDOW\\\", \\\"__current_case__\\\": 0, \\\"required_quality\\\": \\\"20\\\"}}]\", \"__page__\": 0, \"__rerun_remap_job_id__\": null, \"paired_end\": \"{\\\"fastq_in\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}, \\\"is_paired_end\\\": \\\"false\\\", \\\"__current_case__\\\": 0}\", \"illuminaclip\": \"{\\\"do_illuminaclip\\\": \\\"false\\\", \\\"__current_case__\\\": 1}\"}", 
+            "tool_version": "0.32.3", 
+            "type": "tool", 
+            "uuid": "2fa9fae1-b3ba-407b-8474-16832553c653", 
+            "workflow_outputs": []
+        }, 
+        "17": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/hisat2/hisat2/2.0.3", 
+            "id": 17, 
+            "input_connections": {
+                "input_format|paired|reads": {
+                    "id": 9, 
+                    "output_name": "fastq_out"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool HISAT", 
+                    "name": "spliced_options"
+                }
+            ], 
+            "label": null, 
+            "name": "HISAT", 
+            "outputs": [
+                {
+                    "name": "output_alignments", 
+                    "type": "bam"
+                }
+            ], 
+            "position": {
+                "left": 829.984375, 
+                "top": 795.40625
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/hisat2/hisat2/2.0.3", 
+            "tool_shed_repository": {
+                "changeset_revision": "1eb21dccc2fa", 
+                "name": "hisat2", 
+                "owner": "iuc", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"alignment_options\": \"{\\\"__current_case__\\\": 0, \\\"alignment_options_selector\\\": \\\"defaults\\\"}\", \"input_format\": \"{\\\"paired\\\": {\\\"reads\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}, \\\"paired_end_options\\\": {\\\"paired_end_options_selector\\\": \\\"defaults\\\", \\\"__current_case__\\\": 0}, \\\"__current_case__\\\": 0, \\\"paired_selector\\\": \\\"paired_collection\\\"}, \\\"input_format_selector\\\": \\\"fastq\\\", \\\"__current_case__\\\": 1}\", \"__page__\": 0, \"max_primary\": \"\\\"5\\\"\", \"scoring_options\": \"{\\\"scoring_options_selector\\\": \\\"defaults\\\", \\\"__current_case__\\\": 0}\", \"reference_genome\": \"{\\\"index\\\": \\\"mm10\\\", \\\"reference_genome_source\\\": \\\"indexed\\\", \\\"__current_case__\\\": 0}\", \"spliced_options\": \"{\\\"coefficient\\\": \\\"0\\\", \\\"canonical_penalty\\\": \\\"0\\\", \\\"no_spliced_alignment\\\": \\\"false\\\", \\\"nc_function_type\\\": \\\"C\\\", \\\"constant_term\\\": \\\"0\\\", \\\"nc_coefficient\\\": \\\"1\\\", \\\"noncanonical_penalty\\\": \\\"3\\\", \\\"known_splice_gtf\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}, \\\"nc_constant_term\\\": \\\"-8\\\", \\\"min_intron\\\": \\\"20\\\", \\\"function_type\\\": \\\"C\\\", \\\"rna_strandness\\\": \\\"R\\\", \\\"__current_case__\\\": 1, \\\"tma\\\": \\\"--dta\\\", \\\"max_intron\\\": \\\"500000\\\", \\\"spliced_options_selector\\\": \\\"advanced\\\"}\", \"paired_options\": \"{\\\"paired_options_selector\\\": \\\"defaults\\\", \\\"__current_case__\\\": 0}\", \"__rerun_remap_job_id__\": null, \"input_options\": \"{\\\"input_options_selector\\\": \\\"defaults\\\", \\\"__current_case__\\\": 0}\"}", 
+            "tool_version": "2.0.3", 
+            "type": "tool", 
+            "uuid": "b3c3c1c6-7c3e-4b65-8fd2-9f33fea1b0b3", 
+            "workflow_outputs": []
+        }, 
+        "18": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/hisat2/hisat2/2.0.3", 
+            "id": 18, 
+            "input_connections": {
+                "input_format|paired|reads": {
+                    "id": 10, 
+                    "output_name": "fastq_out"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool HISAT", 
+                    "name": "spliced_options"
+                }
+            ], 
+            "label": null, 
+            "name": "HISAT", 
+            "outputs": [
+                {
+                    "name": "output_alignments", 
+                    "type": "bam"
+                }
+            ], 
+            "position": {
+                "left": 829.984375, 
+                "top": 958.4375
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/hisat2/hisat2/2.0.3", 
+            "tool_shed_repository": {
+                "changeset_revision": "1eb21dccc2fa", 
+                "name": "hisat2", 
+                "owner": "iuc", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"alignment_options\": \"{\\\"__current_case__\\\": 0, \\\"alignment_options_selector\\\": \\\"defaults\\\"}\", \"input_format\": \"{\\\"paired\\\": {\\\"reads\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}, \\\"paired_end_options\\\": {\\\"paired_end_options_selector\\\": \\\"defaults\\\", \\\"__current_case__\\\": 0}, \\\"__current_case__\\\": 0, \\\"paired_selector\\\": \\\"paired_collection\\\"}, \\\"input_format_selector\\\": \\\"fastq\\\", \\\"__current_case__\\\": 1}\", \"__page__\": 0, \"max_primary\": \"\\\"5\\\"\", \"scoring_options\": \"{\\\"scoring_options_selector\\\": \\\"defaults\\\", \\\"__current_case__\\\": 0}\", \"reference_genome\": \"{\\\"index\\\": \\\"mm10\\\", \\\"reference_genome_source\\\": \\\"indexed\\\", \\\"__current_case__\\\": 0}\", \"spliced_options\": \"{\\\"coefficient\\\": \\\"0\\\", \\\"canonical_penalty\\\": \\\"0\\\", \\\"no_spliced_alignment\\\": \\\"false\\\", \\\"nc_function_type\\\": \\\"C\\\", \\\"constant_term\\\": \\\"0\\\", \\\"nc_coefficient\\\": \\\"1\\\", \\\"noncanonical_penalty\\\": \\\"3\\\", \\\"known_splice_gtf\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}, \\\"nc_constant_term\\\": \\\"-8\\\", \\\"min_intron\\\": \\\"20\\\", \\\"function_type\\\": \\\"C\\\", \\\"rna_strandness\\\": \\\"R\\\", \\\"__current_case__\\\": 1, \\\"tma\\\": \\\"--dta\\\", \\\"max_intron\\\": \\\"500000\\\", \\\"spliced_options_selector\\\": \\\"advanced\\\"}\", \"paired_options\": \"{\\\"paired_options_selector\\\": \\\"defaults\\\", \\\"__current_case__\\\": 0}\", \"__rerun_remap_job_id__\": null, \"input_options\": \"{\\\"input_options_selector\\\": \\\"defaults\\\", \\\"__current_case__\\\": 0}\"}", 
+            "tool_version": "2.0.3", 
+            "type": "tool", 
+            "uuid": "ffdbe155-1fef-4434-a55e-c55d2e0159c1", 
+            "workflow_outputs": []
+        }, 
+        "19": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/hisat2/hisat2/2.0.3", 
+            "id": 19, 
+            "input_connections": {
+                "input_format|paired|reads": {
+                    "id": 11, 
+                    "output_name": "fastq_out"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool HISAT", 
+                    "name": "spliced_options"
+                }
+            ], 
+            "label": null, 
+            "name": "HISAT", 
+            "outputs": [
+                {
+                    "name": "output_alignments", 
+                    "type": "bam"
+                }
+            ], 
+            "position": {
+                "left": 829.984375, 
+                "top": 1121.421875
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/hisat2/hisat2/2.0.3", 
+            "tool_shed_repository": {
+                "changeset_revision": "1eb21dccc2fa", 
+                "name": "hisat2", 
+                "owner": "iuc", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"alignment_options\": \"{\\\"__current_case__\\\": 0, \\\"alignment_options_selector\\\": \\\"defaults\\\"}\", \"input_format\": \"{\\\"paired\\\": {\\\"reads\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}, \\\"paired_end_options\\\": {\\\"paired_end_options_selector\\\": \\\"defaults\\\", \\\"__current_case__\\\": 0}, \\\"__current_case__\\\": 0, \\\"paired_selector\\\": \\\"paired_collection\\\"}, \\\"input_format_selector\\\": \\\"fastq\\\", \\\"__current_case__\\\": 1}\", \"__page__\": 0, \"max_primary\": \"\\\"5\\\"\", \"scoring_options\": \"{\\\"scoring_options_selector\\\": \\\"defaults\\\", \\\"__current_case__\\\": 0}\", \"reference_genome\": \"{\\\"index\\\": \\\"mm10\\\", \\\"reference_genome_source\\\": \\\"indexed\\\", \\\"__current_case__\\\": 0}\", \"spliced_options\": \"{\\\"coefficient\\\": \\\"0\\\", \\\"canonical_penalty\\\": \\\"0\\\", \\\"no_spliced_alignment\\\": \\\"false\\\", \\\"nc_function_type\\\": \\\"C\\\", \\\"constant_term\\\": \\\"0\\\", \\\"nc_coefficient\\\": \\\"1\\\", \\\"noncanonical_penalty\\\": \\\"3\\\", \\\"known_splice_gtf\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}, \\\"nc_constant_term\\\": \\\"-8\\\", \\\"min_intron\\\": \\\"20\\\", \\\"function_type\\\": \\\"C\\\", \\\"rna_strandness\\\": \\\"R\\\", \\\"__current_case__\\\": 1, \\\"tma\\\": \\\"--dta\\\", \\\"max_intron\\\": \\\"500000\\\", \\\"spliced_options_selector\\\": \\\"advanced\\\"}\", \"paired_options\": \"{\\\"paired_options_selector\\\": \\\"defaults\\\", \\\"__current_case__\\\": 0}\", \"__rerun_remap_job_id__\": null, \"input_options\": \"{\\\"input_options_selector\\\": \\\"defaults\\\", \\\"__current_case__\\\": 0}\"}", 
+            "tool_version": "2.0.3", 
+            "type": "tool", 
+            "uuid": "2fa01eba-e1dc-4e3b-a12c-ab9cdad41586", 
+            "workflow_outputs": []
+        }, 
+        "20": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/hisat2/hisat2/2.0.3", 
+            "id": 20, 
+            "input_connections": {
+                "input_format|paired|reads": {
+                    "id": 12, 
+                    "output_name": "fastq_out"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool HISAT", 
+                    "name": "spliced_options"
+                }
+            ], 
+            "label": null, 
+            "name": "HISAT", 
+            "outputs": [
+                {
+                    "name": "output_alignments", 
+                    "type": "bam"
+                }
+            ], 
+            "position": {
+                "left": 829.984375, 
+                "top": 1284.4375
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/hisat2/hisat2/2.0.3", 
+            "tool_shed_repository": {
+                "changeset_revision": "1eb21dccc2fa", 
+                "name": "hisat2", 
+                "owner": "iuc", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"alignment_options\": \"{\\\"__current_case__\\\": 0, \\\"alignment_options_selector\\\": \\\"defaults\\\"}\", \"input_format\": \"{\\\"paired\\\": {\\\"reads\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}, \\\"paired_end_options\\\": {\\\"paired_end_options_selector\\\": \\\"defaults\\\", \\\"__current_case__\\\": 0}, \\\"__current_case__\\\": 0, \\\"paired_selector\\\": \\\"paired_collection\\\"}, \\\"input_format_selector\\\": \\\"fastq\\\", \\\"__current_case__\\\": 1}\", \"__page__\": 0, \"max_primary\": \"\\\"5\\\"\", \"scoring_options\": \"{\\\"scoring_options_selector\\\": \\\"defaults\\\", \\\"__current_case__\\\": 0}\", \"reference_genome\": \"{\\\"index\\\": \\\"mm10\\\", \\\"reference_genome_source\\\": \\\"indexed\\\", \\\"__current_case__\\\": 0}\", \"spliced_options\": \"{\\\"coefficient\\\": \\\"0\\\", \\\"canonical_penalty\\\": \\\"0\\\", \\\"no_spliced_alignment\\\": \\\"false\\\", \\\"nc_function_type\\\": \\\"C\\\", \\\"constant_term\\\": \\\"0\\\", \\\"nc_coefficient\\\": \\\"1\\\", \\\"noncanonical_penalty\\\": \\\"3\\\", \\\"known_splice_gtf\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}, \\\"nc_constant_term\\\": \\\"-8\\\", \\\"min_intron\\\": \\\"20\\\", \\\"function_type\\\": \\\"C\\\", \\\"rna_strandness\\\": \\\"R\\\", \\\"__current_case__\\\": 1, \\\"tma\\\": \\\"--dta\\\", \\\"max_intron\\\": \\\"500000\\\", \\\"spliced_options_selector\\\": \\\"advanced\\\"}\", \"paired_options\": \"{\\\"paired_options_selector\\\": \\\"defaults\\\", \\\"__current_case__\\\": 0}\", \"__rerun_remap_job_id__\": null, \"input_options\": \"{\\\"input_options_selector\\\": \\\"defaults\\\", \\\"__current_case__\\\": 0}\"}", 
+            "tool_version": "2.0.3", 
+            "type": "tool", 
+            "uuid": "af84b527-a56b-4349-b6c5-74aef0939718", 
+            "workflow_outputs": []
+        }, 
+        "21": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/hisat2/hisat2/2.0.3", 
+            "id": 21, 
+            "input_connections": {
+                "input_format|paired|reads": {
+                    "id": 13, 
+                    "output_name": "fastq_out"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool HISAT", 
+                    "name": "spliced_options"
+                }
+            ], 
+            "label": null, 
+            "name": "HISAT", 
+            "outputs": [
+                {
+                    "name": "output_alignments", 
+                    "type": "bam"
+                }
+            ], 
+            "position": {
+                "left": 829.984375, 
+                "top": 1447.4375
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/hisat2/hisat2/2.0.3", 
+            "tool_shed_repository": {
+                "changeset_revision": "1eb21dccc2fa", 
+                "name": "hisat2", 
+                "owner": "iuc", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"alignment_options\": \"{\\\"__current_case__\\\": 0, \\\"alignment_options_selector\\\": \\\"defaults\\\"}\", \"input_format\": \"{\\\"paired\\\": {\\\"reads\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}, \\\"paired_end_options\\\": {\\\"paired_end_options_selector\\\": \\\"defaults\\\", \\\"__current_case__\\\": 0}, \\\"__current_case__\\\": 0, \\\"paired_selector\\\": \\\"paired_collection\\\"}, \\\"input_format_selector\\\": \\\"fastq\\\", \\\"__current_case__\\\": 1}\", \"__page__\": 0, \"max_primary\": \"\\\"5\\\"\", \"scoring_options\": \"{\\\"scoring_options_selector\\\": \\\"defaults\\\", \\\"__current_case__\\\": 0}\", \"reference_genome\": \"{\\\"index\\\": \\\"mm10\\\", \\\"reference_genome_source\\\": \\\"indexed\\\", \\\"__current_case__\\\": 0}\", \"spliced_options\": \"{\\\"coefficient\\\": \\\"0\\\", \\\"canonical_penalty\\\": \\\"0\\\", \\\"no_spliced_alignment\\\": \\\"false\\\", \\\"nc_function_type\\\": \\\"C\\\", \\\"constant_term\\\": \\\"0\\\", \\\"nc_coefficient\\\": \\\"1\\\", \\\"noncanonical_penalty\\\": \\\"3\\\", \\\"known_splice_gtf\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}, \\\"nc_constant_term\\\": \\\"-8\\\", \\\"min_intron\\\": \\\"20\\\", \\\"function_type\\\": \\\"C\\\", \\\"rna_strandness\\\": \\\"R\\\", \\\"__current_case__\\\": 1, \\\"tma\\\": \\\"--dta\\\", \\\"max_intron\\\": \\\"500000\\\", \\\"spliced_options_selector\\\": \\\"advanced\\\"}\", \"paired_options\": \"{\\\"paired_options_selector\\\": \\\"defaults\\\", \\\"__current_case__\\\": 0}\", \"__rerun_remap_job_id__\": null, \"input_options\": \"{\\\"input_options_selector\\\": \\\"defaults\\\", \\\"__current_case__\\\": 0}\"}", 
+            "tool_version": "2.0.3", 
+            "type": "tool", 
+            "uuid": "cf016876-736e-429e-991a-7695ab165940", 
+            "workflow_outputs": []
+        }, 
+        "22": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/hisat2/hisat2/2.0.3", 
+            "id": 22, 
+            "input_connections": {
+                "input_format|paired|reads": {
+                    "id": 14, 
+                    "output_name": "fastq_out"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool HISAT", 
+                    "name": "spliced_options"
+                }
+            ], 
+            "label": null, 
+            "name": "HISAT", 
+            "outputs": [
+                {
+                    "name": "output_alignments", 
+                    "type": "bam"
+                }
+            ], 
+            "position": {
+                "left": 828.984375, 
+                "top": 1610.40625
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/hisat2/hisat2/2.0.3", 
+            "tool_shed_repository": {
+                "changeset_revision": "1eb21dccc2fa", 
+                "name": "hisat2", 
+                "owner": "iuc", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"alignment_options\": \"{\\\"__current_case__\\\": 0, \\\"alignment_options_selector\\\": \\\"defaults\\\"}\", \"input_format\": \"{\\\"paired\\\": {\\\"reads\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}, \\\"paired_end_options\\\": {\\\"paired_end_options_selector\\\": \\\"defaults\\\", \\\"__current_case__\\\": 0}, \\\"__current_case__\\\": 0, \\\"paired_selector\\\": \\\"paired_collection\\\"}, \\\"input_format_selector\\\": \\\"fastq\\\", \\\"__current_case__\\\": 1}\", \"__page__\": 0, \"max_primary\": \"\\\"5\\\"\", \"scoring_options\": \"{\\\"scoring_options_selector\\\": \\\"defaults\\\", \\\"__current_case__\\\": 0}\", \"reference_genome\": \"{\\\"index\\\": \\\"mm10\\\", \\\"reference_genome_source\\\": \\\"indexed\\\", \\\"__current_case__\\\": 0}\", \"spliced_options\": \"{\\\"coefficient\\\": \\\"0\\\", \\\"canonical_penalty\\\": \\\"0\\\", \\\"no_spliced_alignment\\\": \\\"false\\\", \\\"nc_function_type\\\": \\\"C\\\", \\\"constant_term\\\": \\\"0\\\", \\\"nc_coefficient\\\": \\\"1\\\", \\\"noncanonical_penalty\\\": \\\"3\\\", \\\"known_splice_gtf\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}, \\\"nc_constant_term\\\": \\\"-8\\\", \\\"min_intron\\\": \\\"20\\\", \\\"function_type\\\": \\\"C\\\", \\\"rna_strandness\\\": \\\"R\\\", \\\"__current_case__\\\": 1, \\\"tma\\\": \\\"--dta\\\", \\\"max_intron\\\": \\\"500000\\\", \\\"spliced_options_selector\\\": \\\"advanced\\\"}\", \"paired_options\": \"{\\\"paired_options_selector\\\": \\\"defaults\\\", \\\"__current_case__\\\": 0}\", \"__rerun_remap_job_id__\": null, \"input_options\": \"{\\\"input_options_selector\\\": \\\"defaults\\\", \\\"__current_case__\\\": 0}\"}", 
+            "tool_version": "2.0.3", 
+            "type": "tool", 
+            "uuid": "2033e1ee-8f12-44b2-b925-982c531dc224", 
+            "workflow_outputs": []
+        }, 
+        "23": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/hisat2/hisat2/2.0.3", 
+            "id": 23, 
+            "input_connections": {
+                "input_format|paired|reads": {
+                    "id": 15, 
+                    "output_name": "fastq_out"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool HISAT", 
+                    "name": "spliced_options"
+                }
+            ], 
+            "label": null, 
+            "name": "HISAT", 
+            "outputs": [
+                {
+                    "name": "output_alignments", 
+                    "type": "bam"
+                }
+            ], 
+            "position": {
+                "left": 829.984375, 
+                "top": 1773.4375
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/hisat2/hisat2/2.0.3", 
+            "tool_shed_repository": {
+                "changeset_revision": "1eb21dccc2fa", 
+                "name": "hisat2", 
+                "owner": "iuc", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"alignment_options\": \"{\\\"__current_case__\\\": 0, \\\"alignment_options_selector\\\": \\\"defaults\\\"}\", \"input_format\": \"{\\\"paired\\\": {\\\"reads\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}, \\\"paired_end_options\\\": {\\\"paired_end_options_selector\\\": \\\"defaults\\\", \\\"__current_case__\\\": 0}, \\\"__current_case__\\\": 0, \\\"paired_selector\\\": \\\"paired_collection\\\"}, \\\"input_format_selector\\\": \\\"fastq\\\", \\\"__current_case__\\\": 1}\", \"__page__\": 0, \"max_primary\": \"\\\"5\\\"\", \"scoring_options\": \"{\\\"scoring_options_selector\\\": \\\"defaults\\\", \\\"__current_case__\\\": 0}\", \"reference_genome\": \"{\\\"index\\\": \\\"mm10\\\", \\\"reference_genome_source\\\": \\\"indexed\\\", \\\"__current_case__\\\": 0}\", \"spliced_options\": \"{\\\"coefficient\\\": \\\"0\\\", \\\"canonical_penalty\\\": \\\"0\\\", \\\"no_spliced_alignment\\\": \\\"false\\\", \\\"nc_function_type\\\": \\\"C\\\", \\\"constant_term\\\": \\\"0\\\", \\\"nc_coefficient\\\": \\\"1\\\", \\\"noncanonical_penalty\\\": \\\"3\\\", \\\"known_splice_gtf\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}, \\\"nc_constant_term\\\": \\\"-8\\\", \\\"min_intron\\\": \\\"20\\\", \\\"function_type\\\": \\\"C\\\", \\\"rna_strandness\\\": \\\"R\\\", \\\"__current_case__\\\": 1, \\\"tma\\\": \\\"--dta\\\", \\\"max_intron\\\": \\\"500000\\\", \\\"spliced_options_selector\\\": \\\"advanced\\\"}\", \"paired_options\": \"{\\\"paired_options_selector\\\": \\\"defaults\\\", \\\"__current_case__\\\": 0}\", \"__rerun_remap_job_id__\": null, \"input_options\": \"{\\\"input_options_selector\\\": \\\"defaults\\\", \\\"__current_case__\\\": 0}\"}", 
+            "tool_version": "2.0.3", 
+            "type": "tool", 
+            "uuid": "ce03d250-4104-4323-b6d4-3dc29a0ccd76", 
+            "workflow_outputs": []
+        }, 
+        "24": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/hisat2/hisat2/2.0.3", 
+            "id": 24, 
+            "input_connections": {
+                "input_format|paired|reads": {
+                    "id": 16, 
+                    "output_name": "fastq_out"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool HISAT", 
+                    "name": "spliced_options"
+                }
+            ], 
+            "label": null, 
+            "name": "HISAT", 
+            "outputs": [
+                {
+                    "name": "output_alignments", 
+                    "type": "bam"
+                }
+            ], 
+            "position": {
+                "left": 829.984375, 
+                "top": 1936.421875
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/hisat2/hisat2/2.0.3", 
+            "tool_shed_repository": {
+                "changeset_revision": "1eb21dccc2fa", 
+                "name": "hisat2", 
+                "owner": "iuc", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"alignment_options\": \"{\\\"__current_case__\\\": 0, \\\"alignment_options_selector\\\": \\\"defaults\\\"}\", \"input_format\": \"{\\\"paired\\\": {\\\"reads\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}, \\\"paired_end_options\\\": {\\\"paired_end_options_selector\\\": \\\"defaults\\\", \\\"__current_case__\\\": 0}, \\\"__current_case__\\\": 0, \\\"paired_selector\\\": \\\"paired_collection\\\"}, \\\"input_format_selector\\\": \\\"fastq\\\", \\\"__current_case__\\\": 1}\", \"__page__\": 0, \"max_primary\": \"\\\"5\\\"\", \"scoring_options\": \"{\\\"scoring_options_selector\\\": \\\"defaults\\\", \\\"__current_case__\\\": 0}\", \"reference_genome\": \"{\\\"index\\\": \\\"mm10\\\", \\\"reference_genome_source\\\": \\\"indexed\\\", \\\"__current_case__\\\": 0}\", \"spliced_options\": \"{\\\"coefficient\\\": \\\"0\\\", \\\"canonical_penalty\\\": \\\"0\\\", \\\"no_spliced_alignment\\\": \\\"false\\\", \\\"nc_function_type\\\": \\\"C\\\", \\\"constant_term\\\": \\\"0\\\", \\\"nc_coefficient\\\": \\\"1\\\", \\\"noncanonical_penalty\\\": \\\"3\\\", \\\"known_splice_gtf\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}, \\\"nc_constant_term\\\": \\\"-8\\\", \\\"min_intron\\\": \\\"20\\\", \\\"function_type\\\": \\\"C\\\", \\\"rna_strandness\\\": \\\"R\\\", \\\"__current_case__\\\": 1, \\\"tma\\\": \\\"--dta\\\", \\\"max_intron\\\": \\\"500000\\\", \\\"spliced_options_selector\\\": \\\"advanced\\\"}\", \"paired_options\": \"{\\\"paired_options_selector\\\": \\\"defaults\\\", \\\"__current_case__\\\": 0}\", \"__rerun_remap_job_id__\": null, \"input_options\": \"{\\\"input_options_selector\\\": \\\"defaults\\\", \\\"__current_case__\\\": 0}\"}", 
+            "tool_version": "2.0.3", 
+            "type": "tool", 
+            "uuid": "b46216d9-f961-4e65-8640-c71eb19155f4", 
+            "workflow_outputs": []
+        }, 
+        "25": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/bedtools/bedtools_genomecoveragebed/2.24.0", 
+            "id": 25, 
+            "input_connections": {
+                "input": {
+                    "id": 17, 
+                    "output_name": "output_alignments"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool Genome Coverage", 
+                    "name": "genome"
+                }, 
+                {
+                    "description": "runtime parameter for tool Genome Coverage", 
+                    "name": "input"
+                }
+            ], 
+            "label": null, 
+            "name": "Genome Coverage", 
+            "outputs": [
+                {
+                    "name": "output", 
+                    "type": "bedgraph"
+                }
+            ], 
+            "position": {
+                "left": 1188.984375, 
+                "top": 694.40625
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/bedtools/bedtools_genomecoveragebed/2.24.0", 
+            "tool_shed_repository": {
+                "changeset_revision": "d25966c8ddeb", 
+                "name": "bedtools", 
+                "owner": "iuc", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"__page__\": 0, \"d\": \"\\\"false\\\"\", \"__rerun_remap_job_id__\": null, \"three\": \"\\\"false\\\"\", \"five\": \"\\\"false\\\"\", \"genome\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"report\": \"{\\\"report_select\\\": \\\"bg\\\", \\\"zero_regions\\\": \\\"false\\\", \\\"scale\\\": \\\"1.0\\\", \\\"__current_case__\\\": 0}\", \"dz\": \"\\\"false\\\"\", \"strand\": \"\\\"-strand +\\\"\", \"split\": \"\\\"false\\\"\"}", 
+            "tool_version": "2.24.0", 
+            "type": "tool", 
+            "uuid": "d0eaf898-4c62-4f45-93b0-2ab8629896d0", 
+            "workflow_outputs": []
+        }, 
+        "26": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/bedtools/bedtools_genomecoveragebed/2.24.0", 
+            "id": 26, 
+            "input_connections": {
+                "input": {
+                    "id": 17, 
+                    "output_name": "output_alignments"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool Genome Coverage", 
+                    "name": "genome"
+                }, 
+                {
+                    "description": "runtime parameter for tool Genome Coverage", 
+                    "name": "input"
+                }
+            ], 
+            "label": null, 
+            "name": "Genome Coverage", 
+            "outputs": [
+                {
+                    "name": "output", 
+                    "type": "bedgraph"
+                }
+            ], 
+            "position": {
+                "left": 1185.984375, 
+                "top": 834.40625
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/bedtools/bedtools_genomecoveragebed/2.24.0", 
+            "tool_shed_repository": {
+                "changeset_revision": "d25966c8ddeb", 
+                "name": "bedtools", 
+                "owner": "iuc", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"__page__\": 0, \"d\": \"\\\"false\\\"\", \"__rerun_remap_job_id__\": null, \"three\": \"\\\"false\\\"\", \"five\": \"\\\"false\\\"\", \"genome\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"report\": \"{\\\"report_select\\\": \\\"bg\\\", \\\"zero_regions\\\": \\\"false\\\", \\\"scale\\\": \\\"1.0\\\", \\\"__current_case__\\\": 0}\", \"dz\": \"\\\"false\\\"\", \"strand\": \"\\\"-strand -\\\"\", \"split\": \"\\\"false\\\"\"}", 
+            "tool_version": "2.24.0", 
+            "type": "tool", 
+            "uuid": "97f750c3-8eae-4a5d-b86c-c2a60a5aed09", 
+            "workflow_outputs": []
+        }, 
+        "27": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/stringtie/stringtie/1.1.0", 
+            "id": 27, 
+            "input_connections": {
+                "input_bam": {
+                    "id": 17, 
+                    "output_name": "output_alignments"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool StringTie", 
+                    "name": "input_bam"
+                }
+            ], 
+            "label": null, 
+            "name": "StringTie", 
+            "outputs": [
+                {
+                    "name": "output_gtf", 
+                    "type": "gtf"
+                }, 
+                {
+                    "name": "gene_abundance_estimation", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "coverage", 
+                    "type": "gff3"
+                }, 
+                {
+                    "name": "exon_expression", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "intron_expression", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "transcript_expression", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "exon_transcript_mapping", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "intron_transcript_mapping", 
+                    "type": "tabular"
+                }
+            ], 
+            "position": {
+                "left": 994.984375, 
+                "top": 3156.421875
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/stringtie/stringtie/1.1.0", 
+            "tool_shed_repository": {
+                "changeset_revision": "f504b3b7e49d", 
+                "name": "stringtie", 
+                "owner": "iuc", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"input_bam\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"__rerun_remap_job_id__\": null, \"option_set\": \"{\\\"options\\\": \\\"default\\\", \\\"__current_case__\\\": 0}\", \"guide\": \"{\\\"use_guide\\\": \\\"no\\\", \\\"__current_case__\\\": 0}\", \"__page__\": 0}", 
+            "tool_version": "1.1.0", 
+            "type": "tool", 
+            "uuid": "d95fcbae-5eeb-4406-9b57-e192d9267f6d", 
+            "workflow_outputs": []
+        }, 
+        "28": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/bedtools/bedtools_genomecoveragebed/2.24.0", 
+            "id": 28, 
+            "input_connections": {
+                "input": {
+                    "id": 18, 
+                    "output_name": "output_alignments"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool Genome Coverage", 
+                    "name": "genome"
+                }, 
+                {
+                    "description": "runtime parameter for tool Genome Coverage", 
+                    "name": "input"
+                }
+            ], 
+            "label": null, 
+            "name": "Genome Coverage", 
+            "outputs": [
+                {
+                    "name": "output", 
+                    "type": "bedgraph"
+                }
+            ], 
+            "position": {
+                "left": 1553.984375, 
+                "top": 904.40625
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/bedtools/bedtools_genomecoveragebed/2.24.0", 
+            "tool_shed_repository": {
+                "changeset_revision": "d25966c8ddeb", 
+                "name": "bedtools", 
+                "owner": "iuc", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"__page__\": 0, \"d\": \"\\\"false\\\"\", \"__rerun_remap_job_id__\": null, \"three\": \"\\\"false\\\"\", \"five\": \"\\\"false\\\"\", \"genome\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"report\": \"{\\\"report_select\\\": \\\"bg\\\", \\\"zero_regions\\\": \\\"false\\\", \\\"scale\\\": \\\"1.0\\\", \\\"__current_case__\\\": 0}\", \"dz\": \"\\\"false\\\"\", \"strand\": \"\\\"-strand +\\\"\", \"split\": \"\\\"false\\\"\"}", 
+            "tool_version": "2.24.0", 
+            "type": "tool", 
+            "uuid": "8210f6a1-032c-4847-b7f4-28e6cabc6b72", 
+            "workflow_outputs": []
+        }, 
+        "29": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/bedtools/bedtools_genomecoveragebed/2.24.0", 
+            "id": 29, 
+            "input_connections": {
+                "input": {
+                    "id": 18, 
+                    "output_name": "output_alignments"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool Genome Coverage", 
+                    "name": "genome"
+                }, 
+                {
+                    "description": "runtime parameter for tool Genome Coverage", 
+                    "name": "input"
+                }
+            ], 
+            "label": null, 
+            "name": "Genome Coverage", 
+            "outputs": [
+                {
+                    "name": "output", 
+                    "type": "bedgraph"
+                }
+            ], 
+            "position": {
+                "left": 1559.96875, 
+                "top": 1046.40625
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/bedtools/bedtools_genomecoveragebed/2.24.0", 
+            "tool_shed_repository": {
+                "changeset_revision": "d25966c8ddeb", 
+                "name": "bedtools", 
+                "owner": "iuc", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"__page__\": 0, \"d\": \"\\\"false\\\"\", \"__rerun_remap_job_id__\": null, \"three\": \"\\\"false\\\"\", \"five\": \"\\\"false\\\"\", \"genome\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"report\": \"{\\\"report_select\\\": \\\"bg\\\", \\\"zero_regions\\\": \\\"false\\\", \\\"scale\\\": \\\"1.0\\\", \\\"__current_case__\\\": 0}\", \"dz\": \"\\\"false\\\"\", \"strand\": \"\\\"-strand -\\\"\", \"split\": \"\\\"false\\\"\"}", 
+            "tool_version": "2.24.0", 
+            "type": "tool", 
+            "uuid": "a4a99501-1396-4630-9c71-8fd8ebe82fa3", 
+            "workflow_outputs": []
+        }, 
+        "30": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/stringtie/stringtie/1.1.0", 
+            "id": 30, 
+            "input_connections": {
+                "input_bam": {
+                    "id": 18, 
+                    "output_name": "output_alignments"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool StringTie", 
+                    "name": "input_bam"
+                }
+            ], 
+            "label": null, 
+            "name": "StringTie", 
+            "outputs": [
+                {
+                    "name": "output_gtf", 
+                    "type": "gtf"
+                }, 
+                {
+                    "name": "gene_abundance_estimation", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "coverage", 
+                    "type": "gff3"
+                }, 
+                {
+                    "name": "exon_expression", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "intron_expression", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "transcript_expression", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "exon_transcript_mapping", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "intron_transcript_mapping", 
+                    "type": "tabular"
+                }
+            ], 
+            "position": {
+                "left": 1001.96875, 
+                "top": 3502.40625
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/stringtie/stringtie/1.1.0", 
+            "tool_shed_repository": {
+                "changeset_revision": "f504b3b7e49d", 
+                "name": "stringtie", 
+                "owner": "iuc", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"input_bam\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"__rerun_remap_job_id__\": null, \"option_set\": \"{\\\"options\\\": \\\"default\\\", \\\"__current_case__\\\": 0}\", \"guide\": \"{\\\"use_guide\\\": \\\"no\\\", \\\"__current_case__\\\": 0}\", \"__page__\": 0}", 
+            "tool_version": "1.1.0", 
+            "type": "tool", 
+            "uuid": "9aaf2bc9-336c-44f3-925b-6b900fa897da", 
+            "workflow_outputs": []
+        }, 
+        "31": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/bedtools/bedtools_genomecoveragebed/2.24.0", 
+            "id": 31, 
+            "input_connections": {
+                "input": {
+                    "id": 19, 
+                    "output_name": "output_alignments"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool Genome Coverage", 
+                    "name": "genome"
+                }, 
+                {
+                    "description": "runtime parameter for tool Genome Coverage", 
+                    "name": "input"
+                }
+            ], 
+            "label": null, 
+            "name": "Genome Coverage", 
+            "outputs": [
+                {
+                    "name": "output", 
+                    "type": "bedgraph"
+                }
+            ], 
+            "position": {
+                "left": 1202, 
+                "top": 1042.390625
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/bedtools/bedtools_genomecoveragebed/2.24.0", 
+            "tool_shed_repository": {
+                "changeset_revision": "d25966c8ddeb", 
+                "name": "bedtools", 
+                "owner": "iuc", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"__page__\": 0, \"d\": \"\\\"false\\\"\", \"__rerun_remap_job_id__\": null, \"three\": \"\\\"false\\\"\", \"five\": \"\\\"false\\\"\", \"genome\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"report\": \"{\\\"report_select\\\": \\\"bg\\\", \\\"zero_regions\\\": \\\"false\\\", \\\"scale\\\": \\\"1.0\\\", \\\"__current_case__\\\": 0}\", \"dz\": \"\\\"false\\\"\", \"strand\": \"\\\"-strand +\\\"\", \"split\": \"\\\"false\\\"\"}", 
+            "tool_version": "2.24.0", 
+            "type": "tool", 
+            "uuid": "4a2d47bb-5f9a-414a-8156-b235bbf94672", 
+            "workflow_outputs": []
+        }, 
+        "32": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/bedtools/bedtools_genomecoveragebed/2.24.0", 
+            "id": 32, 
+            "input_connections": {
+                "input": {
+                    "id": 19, 
+                    "output_name": "output_alignments"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool Genome Coverage", 
+                    "name": "genome"
+                }, 
+                {
+                    "description": "runtime parameter for tool Genome Coverage", 
+                    "name": "input"
+                }
+            ], 
+            "label": null, 
+            "name": "Genome Coverage", 
+            "outputs": [
+                {
+                    "name": "output", 
+                    "type": "bedgraph"
+                }
+            ], 
+            "position": {
+                "left": 1200.984375, 
+                "top": 1188.375
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/bedtools/bedtools_genomecoveragebed/2.24.0", 
+            "tool_shed_repository": {
+                "changeset_revision": "d25966c8ddeb", 
+                "name": "bedtools", 
+                "owner": "iuc", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"__page__\": 0, \"d\": \"\\\"false\\\"\", \"__rerun_remap_job_id__\": null, \"three\": \"\\\"false\\\"\", \"five\": \"\\\"false\\\"\", \"genome\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"report\": \"{\\\"report_select\\\": \\\"bg\\\", \\\"zero_regions\\\": \\\"false\\\", \\\"scale\\\": \\\"1.0\\\", \\\"__current_case__\\\": 0}\", \"dz\": \"\\\"false\\\"\", \"strand\": \"\\\"-strand -\\\"\", \"split\": \"\\\"false\\\"\"}", 
+            "tool_version": "2.24.0", 
+            "type": "tool", 
+            "uuid": "69ef8420-cc97-4825-a547-a87cd9c77928", 
+            "workflow_outputs": []
+        }, 
+        "33": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/stringtie/stringtie/1.1.0", 
+            "id": 33, 
+            "input_connections": {
+                "input_bam": {
+                    "id": 19, 
+                    "output_name": "output_alignments"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool StringTie", 
+                    "name": "input_bam"
+                }
+            ], 
+            "label": null, 
+            "name": "StringTie", 
+            "outputs": [
+                {
+                    "name": "output_gtf", 
+                    "type": "gtf"
+                }, 
+                {
+                    "name": "gene_abundance_estimation", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "coverage", 
+                    "type": "gff3"
+                }, 
+                {
+                    "name": "exon_expression", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "intron_expression", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "transcript_expression", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "exon_transcript_mapping", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "intron_transcript_mapping", 
+                    "type": "tabular"
+                }
+            ], 
+            "position": {
+                "left": 1002.953125, 
+                "top": 2807.40625
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/stringtie/stringtie/1.1.0", 
+            "tool_shed_repository": {
+                "changeset_revision": "f504b3b7e49d", 
+                "name": "stringtie", 
+                "owner": "iuc", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"input_bam\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"__rerun_remap_job_id__\": null, \"option_set\": \"{\\\"options\\\": \\\"default\\\", \\\"__current_case__\\\": 0}\", \"guide\": \"{\\\"use_guide\\\": \\\"no\\\", \\\"__current_case__\\\": 0}\", \"__page__\": 0}", 
+            "tool_version": "1.1.0", 
+            "type": "tool", 
+            "uuid": "0a7054c5-843e-459d-9dea-0748d54ec95f", 
+            "workflow_outputs": []
+        }, 
+        "34": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/bedtools/bedtools_genomecoveragebed/2.24.0", 
+            "id": 34, 
+            "input_connections": {
+                "input": {
+                    "id": 20, 
+                    "output_name": "output_alignments"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool Genome Coverage", 
+                    "name": "genome"
+                }, 
+                {
+                    "description": "runtime parameter for tool Genome Coverage", 
+                    "name": "input"
+                }
+            ], 
+            "label": null, 
+            "name": "Genome Coverage", 
+            "outputs": [
+                {
+                    "name": "output", 
+                    "type": "bedgraph"
+                }
+            ], 
+            "position": {
+                "left": 1574.984375, 
+                "top": 1277.421875
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/bedtools/bedtools_genomecoveragebed/2.24.0", 
+            "tool_shed_repository": {
+                "changeset_revision": "d25966c8ddeb", 
+                "name": "bedtools", 
+                "owner": "iuc", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"__page__\": 0, \"d\": \"\\\"false\\\"\", \"__rerun_remap_job_id__\": null, \"three\": \"\\\"false\\\"\", \"five\": \"\\\"false\\\"\", \"genome\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"report\": \"{\\\"report_select\\\": \\\"bg\\\", \\\"zero_regions\\\": \\\"false\\\", \\\"scale\\\": \\\"1.0\\\", \\\"__current_case__\\\": 0}\", \"dz\": \"\\\"false\\\"\", \"strand\": \"\\\"-strand +\\\"\", \"split\": \"\\\"false\\\"\"}", 
+            "tool_version": "2.24.0", 
+            "type": "tool", 
+            "uuid": "b8366e62-2761-45d6-83e5-bc461ca6eb34", 
+            "workflow_outputs": []
+        }, 
+        "35": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/bedtools/bedtools_genomecoveragebed/2.24.0", 
+            "id": 35, 
+            "input_connections": {
+                "input": {
+                    "id": 20, 
+                    "output_name": "output_alignments"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool Genome Coverage", 
+                    "name": "genome"
+                }, 
+                {
+                    "description": "runtime parameter for tool Genome Coverage", 
+                    "name": "input"
+                }
+            ], 
+            "label": null, 
+            "name": "Genome Coverage", 
+            "outputs": [
+                {
+                    "name": "output", 
+                    "type": "bedgraph"
+                }
+            ], 
+            "position": {
+                "left": 1579.984375, 
+                "top": 1414.4375
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/bedtools/bedtools_genomecoveragebed/2.24.0", 
+            "tool_shed_repository": {
+                "changeset_revision": "d25966c8ddeb", 
+                "name": "bedtools", 
+                "owner": "iuc", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"__page__\": 0, \"d\": \"\\\"false\\\"\", \"__rerun_remap_job_id__\": null, \"three\": \"\\\"false\\\"\", \"five\": \"\\\"false\\\"\", \"genome\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"report\": \"{\\\"report_select\\\": \\\"bg\\\", \\\"zero_regions\\\": \\\"false\\\", \\\"scale\\\": \\\"1.0\\\", \\\"__current_case__\\\": 0}\", \"dz\": \"\\\"false\\\"\", \"strand\": \"\\\"-strand -\\\"\", \"split\": \"\\\"false\\\"\"}", 
+            "tool_version": "2.24.0", 
+            "type": "tool", 
+            "uuid": "8b284e75-3c21-4f81-bda1-0636d55a5956", 
+            "workflow_outputs": []
+        }, 
+        "36": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/stringtie/stringtie/1.1.0", 
+            "id": 36, 
+            "input_connections": {
+                "input_bam": {
+                    "id": 20, 
+                    "output_name": "output_alignments"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool StringTie", 
+                    "name": "input_bam"
+                }
+            ], 
+            "label": null, 
+            "name": "StringTie", 
+            "outputs": [
+                {
+                    "name": "output_gtf", 
+                    "type": "gtf"
+                }, 
+                {
+                    "name": "gene_abundance_estimation", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "coverage", 
+                    "type": "gff3"
+                }, 
+                {
+                    "name": "exon_expression", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "intron_expression", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "transcript_expression", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "exon_transcript_mapping", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "intron_transcript_mapping", 
+                    "type": "tabular"
+                }
+            ], 
+            "position": {
+                "left": 1339.984375, 
+                "top": 3168.40625
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/stringtie/stringtie/1.1.0", 
+            "tool_shed_repository": {
+                "changeset_revision": "f504b3b7e49d", 
+                "name": "stringtie", 
+                "owner": "iuc", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"input_bam\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"__rerun_remap_job_id__\": null, \"option_set\": \"{\\\"options\\\": \\\"default\\\", \\\"__current_case__\\\": 0}\", \"guide\": \"{\\\"use_guide\\\": \\\"no\\\", \\\"__current_case__\\\": 0}\", \"__page__\": 0}", 
+            "tool_version": "1.1.0", 
+            "type": "tool", 
+            "uuid": "28dc93df-661b-4132-8ad1-5bbbbb3822a9", 
+            "workflow_outputs": []
+        }, 
+        "37": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/bedtools/bedtools_genomecoveragebed/2.24.0", 
+            "id": 37, 
+            "input_connections": {
+                "input": {
+                    "id": 21, 
+                    "output_name": "output_alignments"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool Genome Coverage", 
+                    "name": "genome"
+                }, 
+                {
+                    "description": "runtime parameter for tool Genome Coverage", 
+                    "name": "input"
+                }
+            ], 
+            "label": null, 
+            "name": "Genome Coverage", 
+            "outputs": [
+                {
+                    "name": "output", 
+                    "type": "bedgraph"
+                }
+            ], 
+            "position": {
+                "left": 1212.953125, 
+                "top": 1410.40625
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/bedtools/bedtools_genomecoveragebed/2.24.0", 
+            "tool_shed_repository": {
+                "changeset_revision": "d25966c8ddeb", 
+                "name": "bedtools", 
+                "owner": "iuc", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"__page__\": 0, \"d\": \"\\\"false\\\"\", \"__rerun_remap_job_id__\": null, \"three\": \"\\\"false\\\"\", \"five\": \"\\\"false\\\"\", \"genome\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"report\": \"{\\\"report_select\\\": \\\"bg\\\", \\\"zero_regions\\\": \\\"false\\\", \\\"scale\\\": \\\"1.0\\\", \\\"__current_case__\\\": 0}\", \"dz\": \"\\\"false\\\"\", \"strand\": \"\\\"-strand +\\\"\", \"split\": \"\\\"false\\\"\"}", 
+            "tool_version": "2.24.0", 
+            "type": "tool", 
+            "uuid": "d14ccd6b-c345-4d1d-8e36-0515e8ea459c", 
+            "workflow_outputs": []
+        }, 
+        "38": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/bedtools/bedtools_genomecoveragebed/2.24.0", 
+            "id": 38, 
+            "input_connections": {
+                "input": {
+                    "id": 21, 
+                    "output_name": "output_alignments"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool Genome Coverage", 
+                    "name": "genome"
+                }, 
+                {
+                    "description": "runtime parameter for tool Genome Coverage", 
+                    "name": "input"
+                }
+            ], 
+            "label": null, 
+            "name": "Genome Coverage", 
+            "outputs": [
+                {
+                    "name": "output", 
+                    "type": "bedgraph"
+                }
+            ], 
+            "position": {
+                "left": 1203.96875, 
+                "top": 1566.40625
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/bedtools/bedtools_genomecoveragebed/2.24.0", 
+            "tool_shed_repository": {
+                "changeset_revision": "d25966c8ddeb", 
+                "name": "bedtools", 
+                "owner": "iuc", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"__page__\": 0, \"d\": \"\\\"false\\\"\", \"__rerun_remap_job_id__\": null, \"three\": \"\\\"false\\\"\", \"five\": \"\\\"false\\\"\", \"genome\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"report\": \"{\\\"report_select\\\": \\\"bg\\\", \\\"zero_regions\\\": \\\"false\\\", \\\"scale\\\": \\\"1.0\\\", \\\"__current_case__\\\": 0}\", \"dz\": \"\\\"false\\\"\", \"strand\": \"\\\"-strand -\\\"\", \"split\": \"\\\"false\\\"\"}", 
+            "tool_version": "2.24.0", 
+            "type": "tool", 
+            "uuid": "da01d2b4-dab8-43f8-a784-6f9833d59320", 
+            "workflow_outputs": []
+        }, 
+        "39": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/stringtie/stringtie/1.1.0", 
+            "id": 39, 
+            "input_connections": {
+                "input_bam": {
+                    "id": 21, 
+                    "output_name": "output_alignments"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool StringTie", 
+                    "name": "input_bam"
+                }
+            ], 
+            "label": null, 
+            "name": "StringTie", 
+            "outputs": [
+                {
+                    "name": "output_gtf", 
+                    "type": "gtf"
+                }, 
+                {
+                    "name": "gene_abundance_estimation", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "coverage", 
+                    "type": "gff3"
+                }, 
+                {
+                    "name": "exon_expression", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "intron_expression", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "transcript_expression", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "exon_transcript_mapping", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "intron_transcript_mapping", 
+                    "type": "tabular"
+                }
+            ], 
+            "position": {
+                "left": 1347, 
+                "top": 3514.4375
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/stringtie/stringtie/1.1.0", 
+            "tool_shed_repository": {
+                "changeset_revision": "f504b3b7e49d", 
+                "name": "stringtie", 
+                "owner": "iuc", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"input_bam\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"__rerun_remap_job_id__\": null, \"option_set\": \"{\\\"options\\\": \\\"default\\\", \\\"__current_case__\\\": 0}\", \"guide\": \"{\\\"use_guide\\\": \\\"no\\\", \\\"__current_case__\\\": 0}\", \"__page__\": 0}", 
+            "tool_version": "1.1.0", 
+            "type": "tool", 
+            "uuid": "43c9b109-a65f-483e-b0d4-e734370b9ee6", 
+            "workflow_outputs": []
+        }, 
+        "40": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/bedtools/bedtools_genomecoveragebed/2.24.0", 
+            "id": 40, 
+            "input_connections": {
+                "input": {
+                    "id": 22, 
+                    "output_name": "output_alignments"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool Genome Coverage", 
+                    "name": "genome"
+                }, 
+                {
+                    "description": "runtime parameter for tool Genome Coverage", 
+                    "name": "input"
+                }
+            ], 
+            "label": null, 
+            "name": "Genome Coverage", 
+            "outputs": [
+                {
+                    "name": "output", 
+                    "type": "bedgraph"
+                }
+            ], 
+            "position": {
+                "left": 1583.96875, 
+                "top": 1580.40625
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/bedtools/bedtools_genomecoveragebed/2.24.0", 
+            "tool_shed_repository": {
+                "changeset_revision": "d25966c8ddeb", 
+                "name": "bedtools", 
+                "owner": "iuc", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"__page__\": 0, \"d\": \"\\\"false\\\"\", \"__rerun_remap_job_id__\": null, \"three\": \"\\\"false\\\"\", \"five\": \"\\\"false\\\"\", \"genome\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"report\": \"{\\\"report_select\\\": \\\"bg\\\", \\\"zero_regions\\\": \\\"false\\\", \\\"scale\\\": \\\"1.0\\\", \\\"__current_case__\\\": 0}\", \"dz\": \"\\\"false\\\"\", \"strand\": \"\\\"-strand +\\\"\", \"split\": \"\\\"false\\\"\"}", 
+            "tool_version": "2.24.0", 
+            "type": "tool", 
+            "uuid": "9c6b7014-6aa7-4bda-8df7-569b8c784d91", 
+            "workflow_outputs": []
+        }, 
+        "41": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/bedtools/bedtools_genomecoveragebed/2.24.0", 
+            "id": 41, 
+            "input_connections": {
+                "input": {
+                    "id": 22, 
+                    "output_name": "output_alignments"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool Genome Coverage", 
+                    "name": "genome"
+                }, 
+                {
+                    "description": "runtime parameter for tool Genome Coverage", 
+                    "name": "input"
+                }
+            ], 
+            "label": null, 
+            "name": "Genome Coverage", 
+            "outputs": [
+                {
+                    "name": "output", 
+                    "type": "bedgraph"
+                }
+            ], 
+            "position": {
+                "left": 1593.984375, 
+                "top": 1734.390625
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/bedtools/bedtools_genomecoveragebed/2.24.0", 
+            "tool_shed_repository": {
+                "changeset_revision": "d25966c8ddeb", 
+                "name": "bedtools", 
+                "owner": "iuc", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"__page__\": 0, \"d\": \"\\\"false\\\"\", \"__rerun_remap_job_id__\": null, \"three\": \"\\\"false\\\"\", \"five\": \"\\\"false\\\"\", \"genome\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"report\": \"{\\\"report_select\\\": \\\"bg\\\", \\\"zero_regions\\\": \\\"false\\\", \\\"scale\\\": \\\"1.0\\\", \\\"__current_case__\\\": 0}\", \"dz\": \"\\\"false\\\"\", \"strand\": \"\\\"-strand -\\\"\", \"split\": \"\\\"false\\\"\"}", 
+            "tool_version": "2.24.0", 
+            "type": "tool", 
+            "uuid": "229868bb-7700-4556-9ad9-370c07c98f5f", 
+            "workflow_outputs": []
+        }, 
+        "42": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/stringtie/stringtie/1.1.0", 
+            "id": 42, 
+            "input_connections": {
+                "input_bam": {
+                    "id": 22, 
+                    "output_name": "output_alignments"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool StringTie", 
+                    "name": "input_bam"
+                }
+            ], 
+            "label": null, 
+            "name": "StringTie", 
+            "outputs": [
+                {
+                    "name": "output_gtf", 
+                    "type": "gtf"
+                }, 
+                {
+                    "name": "gene_abundance_estimation", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "coverage", 
+                    "type": "gff3"
+                }, 
+                {
+                    "name": "exon_expression", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "intron_expression", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "transcript_expression", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "exon_transcript_mapping", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "intron_transcript_mapping", 
+                    "type": "tabular"
+                }
+            ], 
+            "position": {
+                "left": 1341, 
+                "top": 2819.40625
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/stringtie/stringtie/1.1.0", 
+            "tool_shed_repository": {
+                "changeset_revision": "f504b3b7e49d", 
+                "name": "stringtie", 
+                "owner": "iuc", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"input_bam\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"__rerun_remap_job_id__\": null, \"option_set\": \"{\\\"options\\\": \\\"default\\\", \\\"__current_case__\\\": 0}\", \"guide\": \"{\\\"use_guide\\\": \\\"no\\\", \\\"__current_case__\\\": 0}\", \"__page__\": 0}", 
+            "tool_version": "1.1.0", 
+            "type": "tool", 
+            "uuid": "85473621-ebb6-4d17-b2e9-dec3a64ce361", 
+            "workflow_outputs": []
+        }, 
+        "43": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/bedtools/bedtools_genomecoveragebed/2.24.0", 
+            "id": 43, 
+            "input_connections": {
+                "input": {
+                    "id": 23, 
+                    "output_name": "output_alignments"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool Genome Coverage", 
+                    "name": "genome"
+                }, 
+                {
+                    "description": "runtime parameter for tool Genome Coverage", 
+                    "name": "input"
+                }
+            ], 
+            "label": null, 
+            "name": "Genome Coverage", 
+            "outputs": [
+                {
+                    "name": "output", 
+                    "type": "bedgraph"
+                }
+            ], 
+            "position": {
+                "left": 1238.984375, 
+                "top": 1735.40625
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/bedtools/bedtools_genomecoveragebed/2.24.0", 
+            "tool_shed_repository": {
+                "changeset_revision": "d25966c8ddeb", 
+                "name": "bedtools", 
+                "owner": "iuc", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"__page__\": 0, \"d\": \"\\\"false\\\"\", \"__rerun_remap_job_id__\": null, \"three\": \"\\\"false\\\"\", \"five\": \"\\\"false\\\"\", \"genome\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"report\": \"{\\\"report_select\\\": \\\"bg\\\", \\\"zero_regions\\\": \\\"false\\\", \\\"scale\\\": \\\"1.0\\\", \\\"__current_case__\\\": 0}\", \"dz\": \"\\\"false\\\"\", \"strand\": \"\\\"-strand +\\\"\", \"split\": \"\\\"false\\\"\"}", 
+            "tool_version": "2.24.0", 
+            "type": "tool", 
+            "uuid": "854e1a94-84bc-42ea-a8a1-2938b24dff5a", 
+            "workflow_outputs": []
+        }, 
+        "44": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/bedtools/bedtools_genomecoveragebed/2.24.0", 
+            "id": 44, 
+            "input_connections": {
+                "input": {
+                    "id": 23, 
+                    "output_name": "output_alignments"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool Genome Coverage", 
+                    "name": "genome"
+                }, 
+                {
+                    "description": "runtime parameter for tool Genome Coverage", 
+                    "name": "input"
+                }
+            ], 
+            "label": null, 
+            "name": "Genome Coverage", 
+            "outputs": [
+                {
+                    "name": "output", 
+                    "type": "bedgraph"
+                }
+            ], 
+            "position": {
+                "left": 1243.015625, 
+                "top": 1848.40625
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/bedtools/bedtools_genomecoveragebed/2.24.0", 
+            "tool_shed_repository": {
+                "changeset_revision": "d25966c8ddeb", 
+                "name": "bedtools", 
+                "owner": "iuc", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"__page__\": 0, \"d\": \"\\\"false\\\"\", \"__rerun_remap_job_id__\": null, \"three\": \"\\\"false\\\"\", \"five\": \"\\\"false\\\"\", \"genome\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"report\": \"{\\\"report_select\\\": \\\"bg\\\", \\\"zero_regions\\\": \\\"false\\\", \\\"scale\\\": \\\"1.0\\\", \\\"__current_case__\\\": 0}\", \"dz\": \"\\\"false\\\"\", \"strand\": \"\\\"-strand -\\\"\", \"split\": \"\\\"false\\\"\"}", 
+            "tool_version": "2.24.0", 
+            "type": "tool", 
+            "uuid": "6fe8503c-d08a-454c-8b20-8d1aedc07baa", 
+            "workflow_outputs": []
+        }, 
+        "45": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/stringtie/stringtie/1.1.0", 
+            "id": 45, 
+            "input_connections": {
+                "input_bam": {
+                    "id": 23, 
+                    "output_name": "output_alignments"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool StringTie", 
+                    "name": "input_bam"
+                }
+            ], 
+            "label": null, 
+            "name": "StringTie", 
+            "outputs": [
+                {
+                    "name": "output_gtf", 
+                    "type": "gtf"
+                }, 
+                {
+                    "name": "gene_abundance_estimation", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "coverage", 
+                    "type": "gff3"
+                }, 
+                {
+                    "name": "exon_expression", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "intron_expression", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "transcript_expression", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "exon_transcript_mapping", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "intron_transcript_mapping", 
+                    "type": "tabular"
+                }
+            ], 
+            "position": {
+                "left": 1346, 
+                "top": 3853.40625
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/stringtie/stringtie/1.1.0", 
+            "tool_shed_repository": {
+                "changeset_revision": "f504b3b7e49d", 
+                "name": "stringtie", 
+                "owner": "iuc", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"input_bam\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"__rerun_remap_job_id__\": null, \"option_set\": \"{\\\"options\\\": \\\"default\\\", \\\"__current_case__\\\": 0}\", \"guide\": \"{\\\"use_guide\\\": \\\"no\\\", \\\"__current_case__\\\": 0}\", \"__page__\": 0}", 
+            "tool_version": "1.1.0", 
+            "type": "tool", 
+            "uuid": "49fd78d5-e5ce-44d9-8a35-96a53eac11a6", 
+            "workflow_outputs": []
+        }, 
+        "46": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/bedtools/bedtools_genomecoveragebed/2.24.0", 
+            "id": 46, 
+            "input_connections": {
+                "input": {
+                    "id": 24, 
+                    "output_name": "output_alignments"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool Genome Coverage", 
+                    "name": "genome"
+                }, 
+                {
+                    "description": "runtime parameter for tool Genome Coverage", 
+                    "name": "input"
+                }
+            ], 
+            "label": null, 
+            "name": "Genome Coverage", 
+            "outputs": [
+                {
+                    "name": "output", 
+                    "type": "bedgraph"
+                }
+            ], 
+            "position": {
+                "left": 1604.984375, 
+                "top": 1943.40625
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/bedtools/bedtools_genomecoveragebed/2.24.0", 
+            "tool_shed_repository": {
+                "changeset_revision": "d25966c8ddeb", 
+                "name": "bedtools", 
+                "owner": "iuc", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"__page__\": 0, \"d\": \"\\\"false\\\"\", \"__rerun_remap_job_id__\": null, \"three\": \"\\\"false\\\"\", \"five\": \"\\\"false\\\"\", \"genome\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"report\": \"{\\\"report_select\\\": \\\"bg\\\", \\\"zero_regions\\\": \\\"false\\\", \\\"scale\\\": \\\"1.0\\\", \\\"__current_case__\\\": 0}\", \"dz\": \"\\\"false\\\"\", \"strand\": \"\\\"-strand +\\\"\", \"split\": \"\\\"false\\\"\"}", 
+            "tool_version": "2.24.0", 
+            "type": "tool", 
+            "uuid": "3c4be83d-a416-4491-b1f7-711bf9f23624", 
+            "workflow_outputs": []
+        }, 
+        "47": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/bedtools/bedtools_genomecoveragebed/2.24.0", 
+            "id": 47, 
+            "input_connections": {
+                "input": {
+                    "id": 24, 
+                    "output_name": "output_alignments"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool Genome Coverage", 
+                    "name": "genome"
+                }, 
+                {
+                    "description": "runtime parameter for tool Genome Coverage", 
+                    "name": "input"
+                }
+            ], 
+            "label": null, 
+            "name": "Genome Coverage", 
+            "outputs": [
+                {
+                    "name": "output", 
+                    "type": "bedgraph"
+                }
+            ], 
+            "position": {
+                "left": 1613.984375, 
+                "top": 2107.40625
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/bedtools/bedtools_genomecoveragebed/2.24.0", 
+            "tool_shed_repository": {
+                "changeset_revision": "d25966c8ddeb", 
+                "name": "bedtools", 
+                "owner": "iuc", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"__page__\": 0, \"d\": \"\\\"false\\\"\", \"__rerun_remap_job_id__\": null, \"three\": \"\\\"false\\\"\", \"five\": \"\\\"false\\\"\", \"genome\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"report\": \"{\\\"report_select\\\": \\\"bg\\\", \\\"zero_regions\\\": \\\"false\\\", \\\"scale\\\": \\\"1.0\\\", \\\"__current_case__\\\": 0}\", \"dz\": \"\\\"false\\\"\", \"strand\": \"\\\"-strand -\\\"\", \"split\": \"\\\"false\\\"\"}", 
+            "tool_version": "2.24.0", 
+            "type": "tool", 
+            "uuid": "b27684ec-d123-4ae1-a14e-e7a18dce170f", 
+            "workflow_outputs": []
+        }, 
+        "48": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/stringtie/stringtie/1.1.0", 
+            "id": 48, 
+            "input_connections": {
+                "input_bam": {
+                    "id": 24, 
+                    "output_name": "output_alignments"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool StringTie", 
+                    "name": "input_bam"
+                }
+            ], 
+            "label": null, 
+            "name": "StringTie", 
+            "outputs": [
+                {
+                    "name": "output_gtf", 
+                    "type": "gtf"
+                }, 
+                {
+                    "name": "gene_abundance_estimation", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "coverage", 
+                    "type": "gff3"
+                }, 
+                {
+                    "name": "exon_expression", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "intron_expression", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "transcript_expression", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "exon_transcript_mapping", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "intron_transcript_mapping", 
+                    "type": "tabular"
+                }
+            ], 
+            "position": {
+                "left": 1029.984375, 
+                "top": 3850.40625
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/stringtie/stringtie/1.1.0", 
+            "tool_shed_repository": {
+                "changeset_revision": "f504b3b7e49d", 
+                "name": "stringtie", 
+                "owner": "iuc", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"input_bam\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"__rerun_remap_job_id__\": null, \"option_set\": \"{\\\"options\\\": \\\"default\\\", \\\"__current_case__\\\": 0}\", \"guide\": \"{\\\"use_guide\\\": \\\"no\\\", \\\"__current_case__\\\": 0}\", \"__page__\": 0}", 
+            "tool_version": "1.1.0", 
+            "type": "tool", 
+            "uuid": "d5d9f44b-b22a-4599-a211-ff9c178acf78", 
+            "workflow_outputs": []
+        }, 
+        "49": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/devteam/cuffmerge/cuffmerge/2.2.1.0", 
+            "id": 49, 
+            "input_connections": {
+                "annotation|reference_annotation": {
+                    "id": 8, 
+                    "output_name": "output"
+                }, 
+                "inputs": [
+                    {
+                        "id": 27, 
+                        "output_name": "output_gtf"
+                    }, 
+                    {
+                        "id": 30, 
+                        "output_name": "output_gtf"
+                    }, 
+                    {
+                        "id": 33, 
+                        "output_name": "output_gtf"
+                    }, 
+                    {
+                        "id": 36, 
+                        "output_name": "output_gtf"
+                    }, 
+                    {
+                        "id": 39, 
+                        "output_name": "output_gtf"
+                    }, 
+                    {
+                        "id": 42, 
+                        "output_name": "output_gtf"
+                    }, 
+                    {
+                        "id": 45, 
+                        "output_name": "output_gtf"
+                    }, 
+                    {
+                        "id": 48, 
+                        "output_name": "output_gtf"
+                    }
+                ]
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool Cuffmerge", 
+                    "name": "inputs"
+                }, 
+                {
+                    "description": "runtime parameter for tool Cuffmerge", 
+                    "name": "annotation"
+                }
+            ], 
+            "label": null, 
+            "name": "Cuffmerge", 
+            "outputs": [
+                {
+                    "name": "merged_transcripts", 
+                    "type": "gtf"
+                }
+            ], 
+            "position": {
+                "left": 1810.234375, 
+                "top": 2971.03125
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/cuffmerge/cuffmerge/2.2.1.0", 
+            "tool_shed_repository": {
+                "changeset_revision": "8160c8ea4eb9", 
+                "name": "cuffmerge", 
+                "owner": "devteam", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"seq_data\": \"{\\\"use_seq_data\\\": \\\"Yes\\\", \\\"seq_source\\\": {\\\"index_source\\\": \\\"cached\\\", \\\"index\\\": \\\"\\\", \\\"__current_case__\\\": 0}, \\\"__current_case__\\\": 1}\", \"inputs\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"__page__\": 0, \"__rerun_remap_job_id__\": null, \"min_isoform_fraction\": \"\\\"0.05\\\"\", \"additional_inputs\": \"[]\", \"annotation\": \"{\\\"reference_annotation\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}, \\\"use_ref_annotation\\\": \\\"Yes\\\", \\\"__current_case__\\\": 0}\"}", 
+            "tool_version": "2.2.1.0", 
+            "type": "tool", 
+            "uuid": "51c057d7-f20a-4473-8328-08ba833f35ba", 
+            "workflow_outputs": []
+        }, 
+        "50": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/devteam/cuffdiff/cuffdiff/2.2.1.3", 
+            "id": 50, 
+            "input_connections": {
+                "gtf_input": {
+                    "id": 49, 
+                    "output_name": "merged_transcripts"
+                }, 
+                "in_type|conditions_0|samples": {
+                    "id": 17, 
+                    "output_name": "output_alignments"
+                }, 
+                "in_type|conditions_1|samples": {
+                    "id": 18, 
+                    "output_name": "output_alignments"
+                }, 
+                "in_type|conditions_2|samples": {
+                    "id": 19, 
+                    "output_name": "output_alignments"
+                }, 
+                "in_type|conditions_3|samples": {
+                    "id": 20, 
+                    "output_name": "output_alignments"
+                }, 
+                "in_type|conditions_4|samples": {
+                    "id": 21, 
+                    "output_name": "output_alignments"
+                }, 
+                "in_type|conditions_5|samples": {
+                    "id": 22, 
+                    "output_name": "output_alignments"
+                }, 
+                "in_type|conditions_6|samples": {
+                    "id": 23, 
+                    "output_name": "output_alignments"
+                }, 
+                "in_type|conditions_7|samples": {
+                    "id": 24, 
+                    "output_name": "output_alignments"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool Cuffdiff", 
+                    "name": "gtf_input"
+                }, 
+                {
+                    "description": "runtime parameter for tool Cuffdiff", 
+                    "name": "advanced_settings"
+                }
+            ], 
+            "label": null, 
+            "name": "Cuffdiff", 
+            "outputs": [
+                {
+                    "name": "isoforms_read_group", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "genes_read_group", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "cds_read_group", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "tss_groups_read_group", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "read_group_info", 
+                    "type": "txt"
+                }, 
+                {
+                    "name": "run_info", 
+                    "type": "txt"
+                }, 
+                {
+                    "name": "splicing_diff", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "promoters_diff", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "cds_diff", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "cds_exp_fpkm_tracking", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "cds_fpkm_tracking", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "cds_count_tracking", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "tss_groups_exp", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "tss_groups_fpkm_tracking", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "tss_groups_count_tracking", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "genes_exp", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "genes_fpkm_tracking", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "genes_count_tracking", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "isoforms_exp", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "isoforms_fpkm_tracking", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "isoforms_count_tracking", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_cummerbund", 
+                    "type": "sqlite"
+                }
+            ], 
+            "position": {
+                "left": 2304.1875, 
+                "top": 1195
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/cuffdiff/cuffdiff/2.2.1.3", 
+            "tool_shed_repository": {
+                "changeset_revision": "0f32ad418df8", 
+                "name": "cuffdiff", 
+                "owner": "devteam", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"advanced_settings\": \"{\\\"library_type\\\": \\\"auto\\\", \\\"time_series\\\": \\\"true\\\", \\\"max_bundle_frags\\\": \\\"500000\\\", \\\"sAdvanced\\\": \\\"Yes\\\", \\\"max_mle_iterations\\\": \\\"5000\\\", \\\"hits_norm\\\": \\\"--compatible-hits-norm\\\", \\\"num_frag_count_draws\\\": \\\"100\\\", \\\"num_frag_assign_draws\\\": \\\"50\\\", \\\"min_reps_for_js_test\\\": \\\"3\\\", \\\"__current_case__\\\": 1, \\\"mask_file\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}}\", \"include_count_files\": \"\\\"No\\\"\", \"multiread_correct\": \"\\\"true\\\"\", \"generate_sqlite\": \"\\\"true\\\"\", \"__page__\": 0, \"library_norm_method\": \"\\\"geometric\\\"\", \"__rerun_remap_job_id__\": null, \"include_read_group_files\": \"\\\"No\\\"\", \"bias_correction\": \"{\\\"do_bias_correction\\\": \\\"No\\\", \\\"__current_case__\\\": 1}\", \"fdr\": \"\\\"0.05\\\"\", \"omit_tabular_output\": \"\\\"false\\\"\", \"additional\": \"{\\\"sAdditional\\\": \\\"No\\\", \\\"__current_case__\\\": 0}\", \"dispersion_method\": \"\\\"pooled\\\"\", \"min_alignment_count\": \"\\\"10\\\"\", \"in_type\": \"{\\\"set_in_type\\\": \\\"BAM\\\", \\\"conditions\\\": [{\\\"__index__\\\": 0, \\\"name\\\": \\\"proB\\\", \\\"samples\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}}, {\\\"__index__\\\": 1, \\\"name\\\": \\\"preB\\\", \\\"samples\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}}, {\\\"__index__\\\": 2, \\\"name\\\": \\\"Immature\\\", \\\"samples\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}}, {\\\"__index__\\\": 3, \\\"name\\\": \\\"Mature\\\", \\\"samples\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}}, {\\\"__index__\\\": 4, \\\"name\\\": \\\"Follicular\\\", \\\"samples\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}}, {\\\"__index__\\\": 5, \\\"name\\\": \\\"Marginal\\\", \\\"samples\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}}, {\\\"__index__\\\": 6, \\\"name\\\": \\\"Germinal\\\", \\\"samples\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}}, {\\\"__index__\\\": 7, \\\"name\\\": \\\"B1a\\\", \\\"samples\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}}], \\\"__current_case__\\\": 0}\", \"length_correction\": \"\\\"\\\"\", \"gtf_input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\"}", 
+            "tool_version": "2.2.1.3", 
+            "type": "tool", 
+            "uuid": "5099d068-9f74-4d1b-b952-14064305a800", 
+            "workflow_outputs": []
+        }
+    }, 
+    "uuid": "3ebde93d-e084-463b-add2-da46af28b241"
+}
