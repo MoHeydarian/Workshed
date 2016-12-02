@@ -1,0 +1,265 @@
+{
+    "a_galaxy_workflow": "true", 
+    "annotation": "", 
+    "format-version": "0.1", 
+    "name": "for downsampling chIPseq data - test v1", 
+    "steps": {
+        "0": {
+            "annotation": "", 
+            "content_id": null, 
+            "id": 0, 
+            "input_connections": {}, 
+            "inputs": [
+                {
+                    "description": "", 
+                    "name": "Sample A forward read"
+                }
+            ], 
+            "label": null, 
+            "name": "Input dataset", 
+            "outputs": [], 
+            "position": {
+                "left": 300, 
+                "top": 234.96875
+            }, 
+            "tool_errors": null, 
+            "tool_id": null, 
+            "tool_state": "{\"name\": \"Sample A forward read\"}", 
+            "tool_version": null, 
+            "type": "data_input", 
+            "uuid": "1afa2b6d-e34c-4a6c-8ebc-57a740e5f793", 
+            "workflow_outputs": []
+        }, 
+        "1": {
+            "annotation": "", 
+            "content_id": null, 
+            "id": 1, 
+            "input_connections": {}, 
+            "inputs": [
+                {
+                    "description": "", 
+                    "name": "regions of interest"
+                }
+            ], 
+            "label": null, 
+            "name": "Input dataset", 
+            "outputs": [], 
+            "position": {
+                "left": 825, 
+                "top": 611.5
+            }, 
+            "tool_errors": null, 
+            "tool_id": null, 
+            "tool_state": "{\"name\": \"regions of interest\"}", 
+            "tool_version": null, 
+            "type": "data_input", 
+            "uuid": "9ba41b68-0940-444a-beef-6d8539f0cb46", 
+            "workflow_outputs": []
+        }, 
+        "2": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/devteam/fastq_trimmer_by_quality/fastq_quality_trimmer/1.0.0", 
+            "id": 2, 
+            "input_connections": {
+                "input_file": {
+                    "id": 0, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool FASTQ Quality Trimmer", 
+                    "name": "input_file"
+                }
+            ], 
+            "label": null, 
+            "name": "FASTQ Quality Trimmer", 
+            "outputs": [
+                {
+                    "name": "output_file", 
+                    "type": "input"
+                }
+            ], 
+            "position": {
+                "left": 492.328125, 
+                "top": 239.96875
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/fastq_trimmer_by_quality/fastq_quality_trimmer/1.0.0", 
+            "tool_shed_repository": {
+                "changeset_revision": "04a609b0fdf6", 
+                "name": "fastq_trimmer_by_quality", 
+                "owner": "devteam", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"__page__\": 0, \"score_comparison\": \"\\\">=\\\"\", \"window_size\": \"\\\"3\\\"\", \"trim_ends\": \"\\\"53\\\"\", \"input_file\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"__rerun_remap_job_id__\": null, \"aggregation_action\": \"\\\"mean\\\"\", \"quality_score\": \"\\\"20.0\\\"\", \"step_size\": \"\\\"1\\\"\", \"keep_zero_length\": \"\\\"false\\\"\", \"exclude_count\": \"\\\"0\\\"\"}", 
+            "tool_version": "1.0.0", 
+            "type": "tool", 
+            "uuid": "f711a1a3-1f74-4dec-a35e-ded12aae71c5", 
+            "workflow_outputs": []
+        }, 
+        "3": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/devteam/bowtie2/bowtie2/2.2.6.2", 
+            "id": 3, 
+            "input_connections": {
+                "library|input_1": {
+                    "id": 2, 
+                    "output_name": "output_file"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool Bowtie2", 
+                    "name": "library"
+                }
+            ], 
+            "label": null, 
+            "name": "Bowtie2", 
+            "outputs": [
+                {
+                    "name": "output_unaligned_reads_l", 
+                    "type": "fastqsanger"
+                }, 
+                {
+                    "name": "output_aligned_reads_l", 
+                    "type": "fastqsanger"
+                }, 
+                {
+                    "name": "output_aligned_reads_r", 
+                    "type": "fastqsanger"
+                }, 
+                {
+                    "name": "output_unaligned_reads_r", 
+                    "type": "fastqsanger"
+                }, 
+                {
+                    "name": "output", 
+                    "type": "bam"
+                }, 
+                {
+                    "name": "output_sam", 
+                    "type": "sam"
+                }, 
+                {
+                    "name": "mapping_stats", 
+                    "type": "txt"
+                }
+            ], 
+            "position": {
+                "left": 728.5, 
+                "top": 247.5
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/bowtie2/bowtie2/2.2.6.2", 
+            "tool_shed_repository": {
+                "changeset_revision": "a9d4f71dbfb0", 
+                "name": "bowtie2", 
+                "owner": "devteam", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"__page__\": 0, \"__rerun_remap_job_id__\": null, \"library\": \"{\\\"aligned_file\\\": \\\"false\\\", \\\"unaligned_file\\\": \\\"false\\\", \\\"type\\\": \\\"single\\\", \\\"__current_case__\\\": 0, \\\"input_1\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}}\", \"reference_genome\": \"{\\\"source\\\": \\\"indexed\\\", \\\"__current_case__\\\": 0, \\\"index\\\": \\\"mm10\\\"}\", \"rg\": \"{\\\"rg_selector\\\": \\\"do_not_set\\\", \\\"__current_case__\\\": 3}\", \"save_mapping_stats\": \"\\\"false\\\"\", \"analysis_type\": \"{\\\"alignment_options\\\": {\\\"__current_case__\\\": 1, \\\"alignment_options_selector\\\": \\\"no\\\"}, \\\"effort_options\\\": {\\\"effort_options_selector\\\": \\\"no\\\", \\\"__current_case__\\\": 1}, \\\"sam_options\\\": {\\\"omit_sec_seq\\\": \\\"false\\\", \\\"sam_options_selector\\\": \\\"yes\\\", \\\"no_unal\\\": \\\"false\\\", \\\"__current_case__\\\": 0}, \\\"other_options\\\": {\\\"other_options_selector\\\": \\\"no\\\", \\\"__current_case__\\\": 1}, \\\"scoring_options\\\": {\\\"scoring_options_selector\\\": \\\"no\\\", \\\"__current_case__\\\": 1}, \\\"analysis_type_selector\\\": \\\"full\\\", \\\"reporting_options\\\": {\\\"reporting_options_selector\\\": \\\"no\\\", \\\"__current_case__\\\": 0}, \\\"__current_case__\\\": 1, \\\"sam_opt\\\": \\\"false\\\", \\\"input_options\\\": {\\\"input_options_selector\\\": \\\"no\\\", \\\"__current_case__\\\": 1}}\"}", 
+            "tool_version": "2.2.6.2", 
+            "type": "tool", 
+            "uuid": "d15fa330-7790-4fc6-bd4e-4a198e266ec9", 
+            "workflow_outputs": []
+        }, 
+        "4": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/devteam/samtools_slice_bam/samtools_slice_bam/2.0", 
+            "id": 4, 
+            "input_connections": {
+                "input_bam": {
+                    "id": 3, 
+                    "output_name": "output"
+                }, 
+                "slice_method|input_interval": {
+                    "id": 1, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool Slice", 
+                    "name": "input_bam"
+                }, 
+                {
+                    "description": "runtime parameter for tool Slice", 
+                    "name": "slice_method"
+                }
+            ], 
+            "label": null, 
+            "name": "Slice", 
+            "outputs": [
+                {
+                    "name": "output_bam", 
+                    "type": "bam"
+                }
+            ], 
+            "position": {
+                "left": 1022, 
+                "top": 492.5
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/samtools_slice_bam/samtools_slice_bam/2.0", 
+            "tool_shed_repository": {
+                "changeset_revision": "2b474ebbfc7d", 
+                "name": "samtools_slice_bam", 
+                "owner": "devteam", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"__page__\": 0, \"__rerun_remap_job_id__\": null, \"input_bam\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"slice_method\": \"{\\\"input_interval\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}, \\\"slice_method_selector\\\": \\\"bed\\\", \\\"__current_case__\\\": 0}\"}", 
+            "tool_version": "2.0", 
+            "type": "tool", 
+            "uuid": "da77b13f-c7fb-4816-9349-2cad061fb946", 
+            "workflow_outputs": []
+        }, 
+        "5": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/devteam/picard/picard_SamToFastq/1.136.0", 
+            "id": 5, 
+            "input_connections": {
+                "inputFile": {
+                    "id": 4, 
+                    "output_name": "output_bam"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool SamToFastq", 
+                    "name": "inputFile"
+                }
+            ], 
+            "label": null, 
+            "name": "SamToFastq", 
+            "outputs": [
+                {
+                    "name": "report", 
+                    "type": "txt"
+                }
+            ], 
+            "position": {
+                "left": 1291.5, 
+                "top": 516.5
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/picard/picard_SamToFastq/1.136.0", 
+            "tool_shed_repository": {
+                "changeset_revision": "efc56ee1ade4", 
+                "name": "picard", 
+                "owner": "devteam", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"clipping_attribute\": \"\\\"null\\\"\", \"__page__\": 0, \"include_non_primary_alignments\": \"\\\"false\\\"\", \"include_non_pf_reads\": \"\\\"false\\\"\", \"output_per_rg\": \"\\\"false\\\"\", \"read2_trim\": \"\\\"0\\\"\", \"interleave\": \"\\\"false\\\"\", \"clipping_action\": \"\\\"null\\\"\", \"read1_trim\": \"\\\"0\\\"\", \"read2_max_bases_to_write\": \"\\\"-1\\\"\", \"validation_stringency\": \"\\\"LENIENT\\\"\", \"inputFile\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"__rerun_remap_job_id__\": null, \"re_reverse\": \"\\\"false\\\"\", \"read1_max_bases_to_write\": \"\\\"-1\\\"\"}", 
+            "tool_version": "1.136.0", 
+            "type": "tool", 
+            "uuid": "85f5be28-db3b-4559-bf90-5595fc13efec", 
+            "workflow_outputs": []
+        }
+    }, 
+    "uuid": "a6d27380-6522-401d-b145-ec8f4f41781b"
+}
